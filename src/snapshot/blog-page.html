@@ -1,0 +1,1287 @@
+
+<!DOCTYPE html>
+<html lang="ru" prefix="og: http://ogp.me/ns#">
+<head>    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @font-face {
+            font-family: 'Formular';
+            font-display: swap;
+            font-style: normal;
+            font-weight: 400;
+            src: url('/local/templates/ih_blog/fonts/Formular/Formular.eot');
+            src: local('Formular'), local('Formular-Regular'),
+            url('/local/templates/ih_blog/fonts/Formular/Formular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('/local/templates/ih_blog/fonts/Formular/Formular.woff2') format('woff2'), /* Super Modern Browsers */
+            url('/local/templates/ih_blog/fonts/Formular/Formular.woff') format('woff'), /* Modern Browsers */
+            url('/local/templates/ih_blog/fonts/Formular/Formular.ttf') format('truetype'); /* Safari, Android, iOS */
+        }
+        @font-face {
+            font-family: 'FormularBold';
+            font-display: swap;
+            font-style: normal;
+            font-weight: bold;
+            src: url('/local/templates/ih_blog/fonts/Formular/FormularBold/Formular-Bold.eot'); /* IE9 Compat Modes */
+            src: local('Formular-Bold'),
+            url('/local/templates/ih_blog/fonts/Formular/FormularBold/Formular-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('/local/templates/ih_blog/fonts/Formular/FormularBold/Formular-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+            url('/local/templates/ih_blog/fonts/Formular/FormularBold/Formular-Bold.woff') format('woff'), /* Modern Browsers */
+            url('/local/templates/ih_blog/fonts/Formular/FormularBold/Formular-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+        }
+        @font-face {
+            font-family: 'FormularBlack';
+            font-display: swap;
+            font-style: normal;
+            font-weight: 900;
+            src: url('/local/templates/ih_blog/fonts/Formular/FormularBlack/Formular-Black.eot'); /* IE9 Compat Modes */
+            src: local('Formular-Black'),
+            url('/local/templates/ih_blog/fonts/Formular/FormularBlack/Formular-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('/local/templates/ih_blog/fonts/Formular/FormularBlack/Formular-Black.woff2') format('woff2'), /* Super Modern Browsers */
+            url('/local/templates/ih_blog/fonts/Formular/FormularBlack/Formular-Black.woff') format('woff'), /* Modern Browsers */
+            url('/local/templates/ih_blog/fonts/Formular/FormularBlack/Formular-Black.ttf') format('truetype'); /* Safari, Android, iOS */
+        }
+        @font-face {
+            font-family: 'LavaPro';
+            font-display: swap;
+            font-style: normal;
+            font-weight: 400;
+            src: url('/local/templates/ih_blog/fonts/LavaPro/LavaPro-Regular.eot'); /* IE9 Compat Modes */
+            src: local('LavaPro'), local('LavaPro-Regular'),
+            url('/local/templates/ih_blog/fonts/LavaPro/LavaPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('/local/templates/ih_blog/fonts/LavaPro/LavaPro-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+            url('/local/templates/ih_blog/fonts/LavaPro/LavaPro-Regular.woff') format('woff'), /* Modern Browsers */
+            url('/local/templates/ih_blog/fonts/LavaPro/LavaPro-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+        }
+        @font-face {
+            font-family: 'LavaProItalic';
+            font-display: swap;
+            font-style: italic;
+            font-weight: 400;
+            src: url('/local/templates/ih_blog/fonts/LavaPro/LavaProItalic/LavaPro-RegularItalic.eot'); /* IE9 Compat Modes */
+            src: local('Lava Pro Regular Italic'), local('Lava-Pro-Regular-Italic'),
+            url('/local/templates/ih_blog/fonts/LavaPro/LavaProItalic/LavaPro-RegularItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('/local/templates/ih_blog/fonts/LavaPro/LavaProItalic/LavaPro-RegularItalic.woff2') format('woff2'), /* Super Modern Browsers */
+            url('/local/templates/ih_blog/fonts/LavaPro/LavaProItalic/LavaPro-RegularItalic.woff') format('woff'), /* Modern Browsers */
+            url('/local/templates/ih_blog/fonts/LavaPro/LavaProItalic/LavaPro-RegularItalic.ttf') format('truetype'); /* Safari, Android, iOS */
+        }
+        @font-face {
+            font-family: 'LavaProBold';
+            font-display: swap;
+            font-style: normal;
+            font-weight: 800;
+            src: url('/local/templates/ih_blog/fonts/LavaPro/LavaProBold/LavaPro-Bold.eot'); /* IE9 Compat Modes */
+            src: local('LavaPro-Bold'),
+            url('/local/templates/ih_blog/fonts/LavaPro/LavaProBold/LavaPro-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('/local/templates/ih_blog/fonts/LavaPro/LavaProBold/LavaPro-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+            url('/local/templates/ih_blog/fonts/LavaPro/LavaProBold/LavaPro-Bold.woff') format('woff'), /* Modern Browsers */
+            url('/local/templates/ih_blog/fonts/LavaPro/LavaProBold/LavaPro-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+        }
+        @font-face {
+            font-family: 'LavaProHeavy';
+            font-display: swap;
+            font-style: normal;
+            font-weight: 800;
+            src: url('/local/templates/ih_blog/fonts/LavaPro/LavaProHeavy/LavaPro-Heavy.eot'); /* IE9 Compat Modes */
+            src: local('LavaPro-Heavy'),
+            url('/local/templates/ih_blog/fonts/LavaPro/LavaProHeavy/LavaPro-Heavy.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('/local/templates/ih_blog/fonts/LavaPro/LavaProHeavy/LavaPro-Heavy.woff2') format('woff2'), /* Super Modern Browsers */
+            url('/local/templates/ih_blog/fonts/LavaPro/LavaProHeavy/LavaPro-Heavy.woff') format('woff'), /* Modern Browsers */
+            url('/local/templates/ih_blog/fonts/LavaPro/LavaProHeavy/LavaPro-Heavy.ttf') format('truetype'); /* Safari, Android, iOS */
+        }
+
+        @font-face {
+            font-family: 'icomoon';
+            src:  url('/local/templates/ih_blog/fonts/icomoon/icomoon.eot?bswf9v');
+            src:  url('/local/templates/ih_blog/fonts/icomoon/icomoon.eot?bswf9v#iefix') format('embedded-opentype'),
+            url('/local/templates/ih_blog/fonts/icomoon/icomoon.ttf?bswf9v') format('truetype'),
+            url('/local/templates/ih_blog/fonts/icomoon/icomoon.woff?bswf9v') format('woff'),
+            url('/local/templates/ih_blog/fonts/icomoon/icomoon.svg?bswf9v#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+        @font-face {
+            font-family:'FontAwesome';
+            font-display: block;
+            src: url('/local/templates/ih_blog/fonts/Awesome/fontawesome-webfont.eot?v=4.7.0');
+            src: url('/local/templates/ih_blog/fonts/Awesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+            url('/local/templates/ih_blog/fonts/Awesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+            url('/local/templates/ih_blog/fonts/Awesome/fontawesome-webfont.woff?v=4.7.0') format('woff'),
+            url('/local/templates/ih_blog/fonts/Awesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),
+            url('/local/templates/ih_blog/fonts/Awesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+            font-weight:normal;
+            font-style:normal
+        }
+    </style>
+
+    <title>Гормональный баланс: что есть, чтобы снизить ПМС и облегчить менопаузу | Статьи агрегатора курсов ИнфоХит</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="Женские гормоны — эстроген, прогестерон, тестостерон — работают как дирижеры оркестра. Их слаженность определяет настроение, вес, сон, либидо и даже состояние... | Блог агрегатора курсов ИнфоХит." />
+<link rel="canonical" href="https://info-hit.ru/blog/gormonalnyy-balans-chto-est-chtoby-snizit-pms-i-oblegchit-menopauzu-4470f74a/" />
+<!--suppress JSAnnotator --><script data-skip-moving="true">(function(w, d) {var v = w.frameCacheVars = {"CACHE_MODE":"HTMLCACHE","storageBlocks":[],"dynamicBlocks":{"head-ihb":"af6304b9fe02","BjSui4":"aee2af4a5378","vertical-ihb":"f1e6efb45622","jxX10R":"649fbc13d7ad"},"AUTO_UPDATE":true,"AUTO_UPDATE_TTL":120,"version":2};var inv = false;if (v.AUTO_UPDATE === false){if (v.AUTO_UPDATE_TTL && v.AUTO_UPDATE_TTL > 0){var lm = Date.parse(d.lastModified);if (!isNaN(lm)){var td = new Date().getTime();if ((lm + v.AUTO_UPDATE_TTL * 1000) >= td){w.frameRequestStart = false;w.preventAutoUpdate = true;return;}inv = true;}}else{w.frameRequestStart = false;w.preventAutoUpdate = true;return;}}var r = w.XMLHttpRequest ? new XMLHttpRequest() : (w.ActiveXObject ? new w.ActiveXObject("Microsoft.XMLHTTP") : null);if (!r) { return; }w.frameRequestStart = true;var m = v.CACHE_MODE; var l = w.location; var x = new Date().getTime();var q = "?bxrand=" + x + (l.search.length > 0 ? "&" + l.search.substring(1) : "");var u = l.protocol + "//" + l.host + l.pathname + q;r.open("GET", u, true);r.setRequestHeader("BX-ACTION-TYPE", "get_dynamic");r.setRequestHeader("X-Bitrix-Composite", "get_dynamic");r.setRequestHeader("BX-CACHE-MODE", m);r.setRequestHeader("BX-CACHE-BLOCKS", v.dynamicBlocks ? JSON.stringify(v.dynamicBlocks) : "");if (inv){r.setRequestHeader("BX-INVALIDATE-CACHE", "Y");}try { r.setRequestHeader("BX-REF", d.referrer || "");} catch(e) {}if (m === "APPCACHE"){r.setRequestHeader("BX-APPCACHE-PARAMS", JSON.stringify(v.PARAMS));r.setRequestHeader("BX-APPCACHE-URL", v.PAGE_URL ? v.PAGE_URL : "");}r.onreadystatechange = function() {if (r.readyState != 4) { return; }var a = r.getResponseHeader("BX-RAND");var b = w.BX && w.BX.frameCache ? w.BX.frameCache : false;if (a != x || !((r.status >= 200 && r.status < 300) || r.status === 304 || r.status === 1223 || r.status === 0)){var f = {error:true, reason:a!=x?"bad_rand":"bad_status", url:u, xhr:r, status:r.status};if (w.BX && w.BX.ready && b){BX.ready(function() {setTimeout(function(){BX.onCustomEvent("onFrameDataRequestFail", [f]);}, 0);});}w.frameRequestFail = f;return;}if (b){b.onFrameDataReceived(r.responseText);if (!w.frameUpdateInvoked){b.update(false);}w.frameUpdateInvoked = true;}else{w.frameDataString = r.responseText;}};r.send();var p = w.performance;if (p && p.addEventListener && p.getEntries && p.setResourceTimingBufferSize){var e = 'resourcetimingbufferfull';var h = function() {if (w.BX && w.BX.frameCache && w.BX.frameCache.frameDataInserted){p.removeEventListener(e, h);}else {p.setResourceTimingBufferSize(p.getEntries().length + 50);}};p.addEventListener(e, h);}})(window, document);</script>
+<script data-skip-moving="true">(function(w, d, n) {var cl = "bx-core";var ht = d.documentElement;var htc = ht ? ht.className : undefined;if (htc === undefined || htc.indexOf(cl) !== -1){return;}var ua = n.userAgent;if (/(iPad;)|(iPhone;)/i.test(ua)){cl += " bx-ios";}else if (/Windows/i.test(ua)){cl += ' bx-win';}else if (/Macintosh/i.test(ua)){cl += " bx-mac";}else if (/Linux/i.test(ua) && !/Android/i.test(ua)){cl += " bx-linux";}else if (/Android/i.test(ua)){cl += " bx-android";}cl += (/(ipad|iphone|android|mobile|touch)/i.test(ua) ? " bx-touch" : " bx-no-touch");cl += w.devicePixelRatio && w.devicePixelRatio >= 2? " bx-retina": " bx-no-retina";if (/AppleWebKit/.test(ua)){cl += " bx-chrome";}else if (/Opera/.test(ua)){cl += " bx-opera";}else if (/Firefox/.test(ua)){cl += " bx-firefox";}ht.className = htc ? htc + " " + cl : cl;})(window, document, navigator);</script>
+
+<link href="/bitrix/js/burlakastudio.realcommenter/css/talk_form.min.css?1619858857261" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/ih_blog/page_54f353ac490bdaea387e2dde7582ff16/page_54f353ac490bdaea387e2dde7582ff16_v1.css?1782884247121074" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/ih_blog/template_6935e353e47f589ac64ac798d0519821/template_6935e353e47f589ac64ac798d0519821_v1.css?1782885575113490" type="text/css"  data-template-style="true" rel="stylesheet" />
+
+
+
+
+
+
+<script data-skip-moving="true">window.__INITIAL_STATE__ = [];</script>
+<script data-skip-moving="true">function s(){!!new URLSearchParams(window.location.search).get("dist-tmp")?(window.__dynamic_base__="/dist-tmp/client",console.log("dynamic base /dist-tmp/client")):window.__dynamic_base__="/dist/client"}s();
+</script>
+<link rel="amphtml" href="https://info-hit.ru/blog/gormonalnyy-balans-chto-est-chtoby-snizit-pms-i-oblegchit-menopauzu-4470f74a/amp/" />
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="ИнфоХит — агрегатор-отзовик онлайн-курсов, школ и экспертов">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://info-hit.ru''">
+<meta property="og:title" name="title" content="Гормональный баланс: что есть, чтобы снизить ПМС и облегчить менопаузу | Статьи агрегатора курсов ИнфоХит">
+<meta property="og:description" content="Женские гормоны — эстроген, прогестерон, тестостерон — работают как дирижеры оркестра. Их слаженность определяет настроение, вес, сон, либидо и даже состояние... | Блог агрегатора курсов ИнфоХит.">
+<meta property="og:image" content="https://info-hit.ruhttps://290320.selcdn.ru/info-hit.ru/resize_cache/1639005/14d8af541550fd5b67be3879138bacae/iblock/8a0/8a06a1ea8d4b1808d71efbfe31411047/portrait_woman_checking_grocery_list_looking_vegetables_holding_notebook_reading_recipe_while.jpg">
+<meta property="og:image:secure_url" content="https://info-hit.ruhttps://290320.selcdn.ru/info-hit.ru/resize_cache/1639005/14d8af541550fd5b67be3879138bacae/iblock/8a0/8a06a1ea8d4b1808d71efbfe31411047/portrait_woman_checking_grocery_list_looking_vegetables_holding_notebook_reading_recipe_while.jpg">
+<meta property="og:image:width" content="1980">
+<meta property="og:image:height" content="1320">
+<script type = "application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://info-hit.ru/blog/gormonalnyy-balans-chto-est-chtoby-snizit-pms-i-oblegchit-menopauzu-4470f74a/#articleText","url":"https://info-hit.ru/blog/gormonalnyy-balans-chto-est-chtoby-snizit-pms-i-oblegchit-menopauzu-4470f74a/#articleText","datePublished":"2026-06-29T17:47:12+03:00","dateModified":"2026-06-30T11:46:41+03:00","headline":"Гормональный баланс: что есть, чтобы снизить ПМС и облегчить менопаузу | Статьи агрегатора курсов ИнфоХит","author":[{"@type":"Person","name":"Университет образовательной медицины | УОМ "}]}]}</script>
+<script type = "application/ld+json">{"@context":"https://schema.org","@type":"CreativeWorkSeries","name":"Гормональный баланс: что есть, чтобы снизить ПМС и облегчить менопаузу | Статьи агрегатора курсов ИнфоХит","aggregateRating":{"@type":"AggregateRating","bestRating":5,"ratingValue":4.87,"ratingCount":108}}</script>
+<script type = "application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"//info-hit.ru/","name":"Главная"}},{"@type":"ListItem","position":2,"item":{"@id":"//info-hit.ru/blog/","name":"Журнал"}},{"@type":"ListItem","position":3,"item":{"@id":"//info-hit.ru/blog/sect-zdorove/","name":"✅ Здоровье"}}]}</script>
+<script data-skip-moving="true">function s(){!!new URLSearchParams(window.location.search).get("dist-tmp")?(window.__dynamic_base__="/dist-tmp/client",console.log("dynamic base /dist-tmp/client")):window.__dynamic_base__="/dist/client"}s();
+</script>
+<link rel="apple-touch-icon" sizes="57x57" href="/include/images/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/include/images/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/include/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/include/images/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/include/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/include/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/include/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/include/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/include/images/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" sizes="16x16" href="/include/images/favicons/favicon-16x16.png">
+<link rel="icon" sizes="32x32" href="/include/images/favicons/favicon-32x32.png">
+<link rel="icon" sizes="96x96" href="/include/images/favicons/favicon-96x96.png">
+<link rel="android-touch-icon" type="image/png" href="/include/images/favicons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/include/images/favicons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" href="/include/images/favicons/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/include/images/favicons/favicon_svg.ico" type="image/svg">
+<script type = "application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [{
+        "@type": "WebSite",
+        "@id": "https://info-hit.ru/#website",
+        "url": "https://info-hit.ru",
+        "name": "ИнфоХит — агрегатор-отзовик онлайн-курсов, школ и экспертов",
+        "description": "Русскоязычный, каталог и отзовик всех курсов по маркетингу, бизнесу, инвестированию, дизайну и программированию. Выбирайте куда пойти учиться.",
+        "inLanguage": "ru-RU"
+    }, {
+        "@type": "WebPage",
+        "@id": "https://info-hit.ru/blog/gormonalnyy-balans-chto-est-chtoby-snizit-pms-i-oblegchit-menopauzu-4470f74a/#webpage",
+        "url": "https://info-hit.ru/blog/gormonalnyy-balans-chto-est-chtoby-snizit-pms-i-oblegchit-menopauzu-4470f74a/",
+        "name": "Гормональный баланс: что есть, чтобы снизить ПМС и облегчить менопаузу | Статьи агрегатора курсов ИнфоХит",
+        "isPartOf": {
+            "@id": "https://info-hit.ru/#website"
+        },
+        "description": "Женские гормоны — эстроген, прогестерон, тестостерон — работают как дирижеры оркестра. Их слаженность определяет настроение, вес, сон, либидо и даже состояние... | Блог агрегатора курсов ИнфоХит.",
+        "inLanguage": "ru-RU",
+        "potentialAction": [{
+            "@type": "ReadAction",
+            "target": ["https://info-hit.ru/blog/gormonalnyy-balans-chto-est-chtoby-snizit-pms-i-oblegchit-menopauzu-4470f74a/"]
+        }]
+    }]
+} </script>
+
+</head>
+
+<body>
+
+    
+    <div id="head-ihb">
+    <div id="bxdynamic_head-ihb_start" style="display:none"></div>
+<div class="head-ihb-skillet">
+<picture>
+   <source media="(max-width: 768px)" srcset="/local/templates/.default/components/bitrix/advertising.banner/banner-top/img/b_skillet_mobile.svg">
+   <source media="(min-width: 769px)" srcset="/local/templates/.default/components/bitrix/advertising.banner/banner-top/img/b_skillet.svg">
+   <img src="/local/templates/.default/components/bitrix/advertising.banner/banner-top/img/b_skillet.svg?v=3" alt="Loader"/>
+</picture>
+</div>
+<div id="bxdynamic_head-ihb_end" style="display:none"></div></div>
+
+    <header class="header transparent">
+        <div class="header-menu-wrap">
+            <a href="/" class="header-logo"><img src="/local/templates/ih_blog/img/header-logo.svg" alt=""><span style="background-image: url('/local/templates/ih_blog/img/logo-mobile.svg')"></span></a>
+            
+<nav class="header-menu">
+            <a href="/catalog/"
+           class="header-menu-item"
+                   >
+            Каталог курсов        </a>
+            <a href="/professions/"
+           class="header-menu-item"
+                   >
+            Профессии        </a>
+            <a href="/authors/"
+           class="header-menu-item"
+                   >
+            Авторы        </a>
+            <a href="/company/"
+           class="header-menu-item"
+                   >
+            Школы        </a>
+            <a href="/events/"
+           class="header-menu-item"
+                   >
+            Вебинары        </a>
+            <a href="/blog/"
+           class="header-menu-item active"
+                   >
+            Журнал        </a>
+    </nav>            <button class="btn header-search-icon" id="header-search">
+                <i class="icon-blog-magnifiying-glass"></i>
+                <i class="icon-blog-exit"></i>
+            </button>
+
+            <div id="bxdynamic_BjSui4_start" style="display:none"></div>
+            
+        <div class="header-enter">
+            <a href="#loginWindow" class="btn header-enter-btn ihit-popup-show js-login-button" data-popup="reg" data-step="auth">Войти</a>
+        </div>
+
+            
+
+        
+<div id="bxdynamic_BjSui4_end" style="display:none"></div>
+            <button class="btn header-mobile-menu-btn" id="open-mobile-menu"><i class="icon-blog-mobile-menu"></i></button>
+        </div>
+
+            <div id="blog-title-search" class="header-search-wrap" style="display: none">
+        <form action="/search/">
+            <input type="text" name="q" class="header-search-field" name="blog-search" id="blog-search" autocomplete="off" placeholder="Что будем искать?">
+            <button type="submit" name="s" class="btn header-search-btn" value="Искать"><i class="icon-magnifiying-glass"></i></button>
+        </form>
+    </div>
+        <section class="mobile-menu" style="display: none">
+            <div class="mobile-menu-header">
+                <img class="mobile-menu-header-logo" src="/local/templates/ih_blog/img/logo-yellow.svg" alt="Логотип ИнфоХит" />
+                <button class="btn close-btn" id="close-mobile-menu"><i class="icon-blog-exit"></i></button>
+            </div>
+
+            
+        <div class="mobile-menu-user">
+                            <a href="#loginWindow" class="mobile-menu-login ihit-popup-show js-login-button" data-popup="reg" data-step="auth"><i class="icon-blog-login"></i>Войти</a>
+                    </div>
+
+    
+            
+<ul class="mobile-menu-list">
+	        <li class="mobile-menu-list-item">
+            <a href="/catalog/" >
+                Каталог курсов            </a>
+        </li>
+	        <li class="mobile-menu-list-item">
+            <a href="/professions/" >
+                Профессии            </a>
+        </li>
+	        <li class="mobile-menu-list-item">
+            <a href="/authors/" >
+                Авторы            </a>
+        </li>
+	        <li class="mobile-menu-list-item">
+            <a href="/company/" >
+                Школы            </a>
+        </li>
+	        <li class="mobile-menu-list-item">
+            <a href="/events/" >
+                Вебинары            </a>
+        </li>
+	        <li class="mobile-menu-list-item active">
+            <a href="/blog/" >
+                Журнал            </a>
+        </li>
+	</ul>            <a href="/about/" class="mobile-menu-bottom-list">О проекте</a>
+            <a href="/add/" class="mobile-menu-bottom-list">Сотрудничество</a>
+        </section>
+    </header>
+    <div class="overlay" style="display: none"></div>
+<main>
+    <section class="blog-detail-cover" style="background-image: url(https://290320.selcdn.ru/info-hit.ru/resize_cache/1639005/14d8af541550fd5b67be3879138bacae/iblock/8a0/8a06a1ea8d4b1808d71efbfe31411047/portrait_woman_checking_grocery_list_looking_vegetables_holding_notebook_reading_recipe_while.jpg);">
+        <div class="blog-detail-cover-filter gradient-pink-purple" style="opacity: 0.75;"></div>
+        <div class="blog-detail-cover-wrap">
+            <div class="container">
+                <a href="/blog/sect-zdorove/" class="blog-detail-cover-breadcrumb"><i class="icon-blog-left-long-arrow"></i>Здоровье</a>
+                <ul class="blog-detail-cover-data list">
+                    <li class="list-item">29.06.2026</li>
+                    <li class="list-item"><i class="icon-blog-views"></i>21</li>
+                    <li class="list-item"><i class="icon-blog-comments"></i>0</li>
+                </ul>
+                <h1 class="blog-detail-cover-title">Гормональный баланс: что есть, чтобы снизить ПМС и облегчить менопаузу</h1>
+                <p class="blog-detail-cover-subtitle">Как питание помогает печени, сахару и гормонам работать в унисон — три принципа для здоровья в любом возрасте</p>
+	            		            <p class="blog-detail-cover-update">Обновлено: 30.06.2026</p>
+	                        </div>
+        </div>
+    </section>
+    <section class="blog-detail-container">
+        <div class="container">
+            <article class="blog-detail-content" id="articleText">
+                <p>Женские гормоны — эстроген, прогестерон, тестостерон — работают как дирижеры оркестра. Их слаженность определяет настроение, вес, сон, либидо и даже состояние кожи. Но в современном мире гормональные качели стали нормой.</p>
+                                    <section class="blog-detail-author">
+                                                    <div class="blog-detail-author-item blog-detail-author-item--school">
+                                                                  <div><img src="/upload/dev2fun.imagecompress/webp/resize_cache/iblock/4b6/merrie5ynk1wgdbipvj3x9xat26mi25t/120_120_1/Screenshot_17.webp" alt="Автор материала: Университет образовательной медицины | УОМ "></div>
+                                                                <div>
+                                                                          <a href="/company-universitet-uom/" target="_blank" class="blog-detail-author-name">Университет образовательной медицины | УОМ </a>
+                                                                        <span>Университет </span>
+                                </div>
+                            </div>
+                                              
+<div id="vertical-ihb">
+    <div id="bxdynamic_vertical-ihb_start" style="display:none"></div>
+<div class="vertical-ihb-skillet">
+<picture>
+   <source media="(max-width: 768px)" srcset="/local/templates/.default/components/bitrix/advertising.banner/banner-vertical/img/b_skillet_mobile.svg">
+   <source media="(min-width: 769px)" srcset="/local/templates/.default/components/bitrix/advertising.banner/banner-vertical/img/b_skillet.svg">
+   <img src="/local/templates/.default/components/bitrix/advertising.banner/banner-vertical/img/b_skillet.svg?v=3" alt="Loader"/>
+</picture>
+</div>
+<div id="bxdynamic_vertical-ihb_end" style="display:none"></div></div>
+                    </section>
+                
+                                                    
+                <p>
+	 По оценкам Международного общества по изучению предменструальных расстройств (ISPMD) (Международное общество по изучению предменструальных расстройств), распространенность ПМС (предменструальный синдром) среди женщин репродуктивного возраста составляет 75-85%. Однако есть способы помочь своему организму с помощью еды — без таблеток (или в дополнение к ним). Разберем три ключевых принципа питания для женского гормонального здоровья.
+</p>
+<h2 class="inside">Принцип 1. Поддерживать печень — главный «детокс-центр» гормонов</h2>
+<p>
+	 Отработанные эстрогены должны выводиться из организма через печень и далее с калом.
+</p>
+<p>
+	 Если печень перегружена (алкоголь, трансжиры, лекарства), а стул нерегулярный, эстрогены реабсорбируются обратно в кровь. Возникает состояние относительной эстрогенодоминации — эстрогенов много, прогестерона нормально или мало. Отсюда болезненные груди, вздутие, мигрени перед месячными.
+</p>
+<p>
+ <strong>Что добавить в рацион:</strong>
+</p>
+<ol>
+	<li>
+	Крестоцветные овощи (брокколи, цветная капуста, брюссельская капуста, руккола). Содержат индол-3-карбинол, который помогает печени мягко утилизировать лишние эстрогены. </li>
+	<li>
+	Клетчатка (отруби, семена льна, овес, ягоды). Связывает выведенные эстрогены в кишечнике и не дает им всосаться обратно. Норма — не менее 25-30 г в день. </li>
+	<li>
+	Свекла, артишоки, зелень (петрушка, кинза). Поддерживают желчеотток, без которого печень не справляется. </li>
+</ol>
+<p>
+ <strong>Чего избегать:</strong> алкоголь (даже бокал вина нагружает печень на сутки), маргарин, фастфуд.
+</p>
+<h2>Принцип 2. Стабилизируйте уровень сахара в крови</h2>
+<p>
+	 Колебания глюкозы — прямой путь к гормональному хаосу. Когда вы съедаете сладкое или белый хлеб, поджелудочная выбрасывает инсулин. Если это происходит часто, возможно развитие инсулинорезистентности. А она подавляет выработку прогестерона и повышает выработку андрогенов (мужских гормонов). Результат: СПКЯ (синдром поликистозных яичников), акне, рост волос на лице, нерегулярный цикл.
+</p>
+<p>
+ <strong>Продукты для ровного сахара:</strong>
+</p>
+<ul>
+	<li>белки (яйца, рыба, курица, тофу) — замедляют всасывание углеводов;</li>
+	<li>
+	полезные жиры (оливковое масло, авокадо, орехи) — уменьшают гликемический индекс любого приема пищи;</li>
+	<li>
+	сложные углеводы (гречка, киноа, чечевица, зеленые овощи) — дают энергию без скачков.</li>
+</ul>
+<p>
+ <b>Простой лайфхак (полезный совет)</b>: начинайте каждый прием пищи с овощей или белка, а углеводы ешьте в конце, чтобы снизить пик глюкозы.
+</p>
+<h2>Принцип 3. Добавьте фитоэстрогены и омега-3 для мягкой поддержки</h2>
+<p>
+	 В перименопаузе (переходном этапе перед менопаузой) выработка собственных эстрогенов падает. Приливы и сухость слизистых — результат. На помощь приходят растительные соединения — фитоэстрогены. Они слабее, чем человеческие гормоны, но способны «подхватить» рецепторы и немного сгладить перепад.
+</p>
+<p>
+ <strong>Где искать фитоэстрогены:</strong>
+</p>
+<ul>
+	<li>семена льна — 1-2 столовые ложки в день, добавляйте в кашу, йогурт, смузи;</li>
+	<li>
+	соевые продукты (тофу, темпе, эдамаме), но органические;</li>
+	<li>
+	красный клевер, люцерна (как добавки, только после консультации).</li>
+</ul>
+<p>
+	 Также омега-3 жирные кислоты (из рыбы, льняного масла, грецких орехов) снижают воспаление, которое усиливает симптомы ПМС и менопаузы. Исследования показывают, что регулярный прием омега-3 уменьшает частоту и интенсивность приливов.
+</p>
+ 
+<section class="blog-detail__inner-course course" data-blog-course-card>
+                        <div class="course__title">Программа «Управление здоровьем женщины: комплексный разбор актуальных вопросов»</div>
+        
+    <div class="course__info">
+        <span class="course__info-author">Автор: Университет образовательной медицины | УОМ</span>
+                                    <div class="course__info-rating">
+                    <span>4.94</span>
+                    <svg width="14" height="14"><use xlink:href="/local/templates/ih_blog/img/sprite.svg#star"></use></svg>
+                </div>
+                                                        <a href="/company-universitet-uom/reviews/" target="_blank" class="course__info-reviews">
+                    (47 отзывов)
+                </a>
+                        </div>
+    <div class="course__descr">
+                                    <img src="/upload/dev2fun.imagecompress/webp/resize_cache/iblock/001/7y2v3aq0gtm6oolnrvbrypnl04bycost/344_150_2/kandinsky_download_1709593239781.webp" class="course__descr-img">
+                                        <ul class="course__descr-chars chars">
+                                    <li class="chars__item">
+                        <span>Продолжительность: </span>
+                        5 месяцев                    </li>
+                                    <li class="chars__item">
+                        <span>Формат: </span>
+                        Видеоуроки                    </li>
+                                    <li class="chars__item">
+                        <span>Уровень сложности: </span>
+                        Для новичков                    </li>
+                            </ul>
+            </div>
+            <p class="course__preview">
+	 Университет образовательной медицины (УОМ) проводит набор на программу повышения квалификации «Управление здоровьем женщины: комплексный разбор актуальных вопросов». Курс рассчитан на 5 месяцев, в...</p>
+                    <div class="course__price-container">
+                    </div>
+                    <a href="/away.php?to=course&cb=32&id=315755" target="_blank" class="course__link">На страницу курса<svg width="14" height="10"><use xlink:href="/local/templates/ih_blog/img/sprite.svg#arrow-right"></use></svg></a>
+            
+    </section>
+<h2>Таблица по фазам цикла и этапам</h2>
+<div class="blog-table">
+	<table class="table table-striped table-responsive">
+ <colgroup><col><col><col><col></colgroup>
+	<tbody>
+	<tr>
+		<th>
+			 Этап
+		</th>
+		<th>
+			 Главная задача
+		</th>
+		<th>
+			 Рекомендованные продукты
+		</th>
+		<th>
+			 Снизить/избегать
+		</th>
+	</tr>
+	<tr>
+		<td>
+			 Фолликулярная фаза (примерно 1-14 день)
+		</td>
+		<td>
+			 Обеспечить энергией, подготовить организм к овуляции
+		</td>
+		<td>
+			 Сложные углеводы (гречка, киноа, овес), ферментированные продукты (кефир, квашеная капуста), легкие белки (рыба, курица, тофу)
+		</td>
+		<td>
+			 Алкоголь, тяжелая жирная пища, полуфабрикаты
+		</td>
+	</tr>
+	<tr>
+		<td>
+			 Овуляторная фаза (14-16 день)
+		</td>
+		<td>
+			 Поддержать пик эстрогена, снизить окислительный стресс
+		</td>
+		<td>
+			 Крестоцветные (брокколи, руккола), цинк (тыквенные семечки, устрицы, говядина), антиоксиданты (ягоды, зелень)
+		</td>
+		<td>
+			 Рафинированный сахар, трансжиры (маргарин, фастфуд)
+		</td>
+	</tr>
+	<tr>
+		<td>
+			 Лютеиновая фаза/ПМС (16-28 день)
+		</td>
+		<td>
+			 Уменьшить эстроген-доминирование, стабилизировать сахар, снять отеки
+		</td>
+		<td>
+			 Клетчатка (отруби, семена льна), брокколи и цветная капуста, магний (какао без сахара, тыквенные семечки, листовая зелень)
+		</td>
+		<td>
+			 Алкоголь, кофеин, сахар, красное мясо, простые углеводы (булки, сладости)
+		</td>
+	</tr>
+	<tr>
+		<td>
+			 Перименопауза/менопауза
+		</td>
+		<td>
+			 Смягчить падение эстрогена, снизить частоту и интенсивность приливов, поддержать кости и сердце
+		</td>
+		<td>
+			 Семена льна (1-2 ст. ложки в день), ферментированные соевые продукты (тофу, темпе, мисо), жирная рыба (лосось, скумбрия, сардины), витамин D
+		</td>
+		<td>
+			 Трансжиры, острые блюда, алкоголь (усиливают приливы и ухудшают сон)
+		</td>
+	</tr>
+	</tbody>
+	</table>
+</div>
+<p>
+ <strong>Важно:</strong> таблица дает общие ориентиры для женщин без серьезных гормональных патологий. При диагностированных нарушениях (СПКЯ, эндометриоз, миомы) изменения рациона стоит согласовывать с лечащим врачом или нутрициологом.
+</p>
+<p>
+ <strong>Что еще нужно знать?</strong> Дефицит витамина D усугубляет все гормональные нарушения. Магний помогает печени выводить лишний эстроген и снижает тревожность. Их желательно проверять и дополнять при необходимости.
+</p>
+<h2>Пример дневного рациона</h2>
+<ol>
+	<li> <strong>Завтрак:</strong> овсянка с молотым льняным семенем и горстью ягод. Льняное семя — источник лигнанов. Эти растительные соединения мягко связывают избыток эстрогенов в кишечнике и помогают выводить их, не давая реабсорбироваться обратно в кровь. Ягоды добавляют антиоксиданты, которые снижают окислительный стресс, особенно актуальный при ПМС и в перименопаузе. Овсянка — сложные углеводы, которые дают ровную энергию без утренних скачков сахара и последующей тяги к сладкому. </li>
+	<li> <strong>Обед:</strong> салат из листовой зелени + кусок жирной рыбы + гречка. Листовая зелень (руккола, шпинат, салат) — это клетчатка и хлорофилл, которые поддерживают второй этап детоксикации печени. Жирная рыба (лосось, скумбрия, сардины) — главный источник омега-3. Они уменьшают выработку провоспалительных (способствующих воспалению) цитокинов, а значит, снижают болезненность груди, отеки и интенсивность приливов. Гречка вместо белого риса или картофеля — стабильный уровень глюкозы, без которого невозможно здоровье гормонов. </li>
+	<li> <strong>Ужин:</strong> запеченные овощи (брокколи, цветная капуста) + тофу или курица. Крестоцветные овощи — брокколи и цветная капуста — содержат индол-3-карбинол. Это вещество помогает печени превращать сильные эстрогены в более мягкие метаболиты и ускоряет их выведение. Тофу (ферментированный соевый продукт) даёт растительные белки и изофлавоны — слабые фитоэстрогены, которые в перименопаузе могут слегка «подхватить» рецепторы и смягчить приливы. Курица подойдёт тем, кто не ест сою. </li>
+	<li> <strong>Перекусы:</strong> яблоко, горсть миндаля, натуральный йогурт. Яблоко — пектин, ещё один вид клетчатки для связывания эстрогенов. Миндаль — магний и витамин E. Магний снижает тревожность и уменьшает ночные судороги, а витамин E может облегчать болезненность молочных желез. Натуральный йогурт — пробиотики для микробиоты. От состава кишечных бактерий зависит, вернутся ли выведенные печенью эстрогены обратно в кровь или покинут организм. </li>
+</ol>
+<p>
+	 В УОМ есть программа повышения квалификации <b>«Управление здоровьем женщины: комплексный разбор актуальных вопросов»</b>, где под руководством акушеров-гинекологов и нутрициологов вы изучите интегративные протоколы для ПМС, СПКЯ, эндометриоза, подготовки к беременности и менопаузы. Курс базируется на научных данных и реальных клинических кейсах.
+</p>
+ 
+<section class="blog-detail__inner-course course" data-blog-course-card>
+                        <div class="course__title">Программа «Управление здоровьем женщины: комплексный разбор актуальных вопросов»</div>
+        
+    <div class="course__info">
+        <span class="course__info-author">Автор: Университет образовательной медицины | УОМ</span>
+                                    <div class="course__info-rating">
+                    <span>4.94</span>
+                    <svg width="14" height="14"><use xlink:href="/local/templates/ih_blog/img/sprite.svg#star"></use></svg>
+                </div>
+                                                        <a href="/company-universitet-uom/reviews/" target="_blank" class="course__info-reviews">
+                    (47 отзывов)
+                </a>
+                        </div>
+    <div class="course__descr">
+                                    <img src="/upload/dev2fun.imagecompress/webp/resize_cache/iblock/001/7y2v3aq0gtm6oolnrvbrypnl04bycost/344_150_2/kandinsky_download_1709593239781.webp" class="course__descr-img">
+                                        <ul class="course__descr-chars chars">
+                                    <li class="chars__item">
+                        <span>Продолжительность: </span>
+                        5 месяцев                    </li>
+                                    <li class="chars__item">
+                        <span>Формат: </span>
+                        Видеоуроки                    </li>
+                                    <li class="chars__item">
+                        <span>Уровень сложности: </span>
+                        Для новичков                    </li>
+                            </ul>
+            </div>
+            <p class="course__preview">
+	 Университет образовательной медицины (УОМ) проводит набор на программу повышения квалификации «Управление здоровьем женщины: комплексный разбор актуальных вопросов». Курс рассчитан на 5 месяцев, в...</p>
+                    <div class="course__price-container">
+                    </div>
+                    <a href="/away.php?to=course&cb=32&id=315755" target="_blank" class="course__link">На страницу курса<svg width="14" height="10"><use xlink:href="/local/templates/ih_blog/img/sprite.svg#arrow-right"></use></svg></a>
+            
+    </section>
+<h2>Краткое заключение</h2>
+<p>
+	 Гормональный баланс строится не на одной «волшебной» таблетке, а на повседневных привычках. Три ключевых принципа — поддержка печени, стабильный сахар и мягкая помощь фитоэстрогенами с омега-3 — работают как система, снижая выраженность ПМС и облегчая течение менопаузы. Корректировка рациона по фазам цикла даёт организму именно ту поддержку, в которой он нуждается в каждый конкретный момент. Однако помните: при серьёзных гинекологических диагнозах питание становится не заменой, а мощным дополнением к лечению, и любые изменения лучше обсуждать с врачом. Начните с малого — добавьте ложку льняного семени или порцию зелени за обедом, и через несколько циклов вы заметите разницу.
+</p>
+<p>
+ <i>*Реклама. ООО «Университет образовательной медицины». ИНН 7707443190</i>
+</p><p>erid=2VtzqvgoRbF</p>
+                                  <section class="blog-detail-integration">
+                    <div class="h4">
+                      Статья подготовлена:
+                    </div>
+                    <div class="blog-detail-integration-info">
+                      <img width="100px" src="/upload/iblock/494/j8jhupslmylq67zqn32w1kv829k3r0f6/UOM_logo_circle2_1_.svg" alt="Университет образовательной медицины">
+                      <div class="blog-detail-integration-wrap">
+                        <p>
+                          <a href="https://info-hit.ru/company-universitet-uom/?erid=2VtzqvgoRbF" target="_blank">
+                            <b>Университет образовательной медицины</b>
+                          </a>
+                        </p>
+                        <p>Образовательная организация, которая более 7 лет обучает специалистов инструментам превентивной медицины и помогает людям заботиться</p>
+                      </div>
+                    </div>
+                  </section>
+                
+                                    <section class="blog-registration-action">
+                        <script data-component-params data-skip-moving="true">
+window["componentParams_id6a451b677ef3e"] = {"arResult":[],"arParams":{"BLOG":true,"METRIKA_GOAL":"sendBlogAction","USER_AUTH":false,"CACHE_TYPE":"A"},"wrapperId":"id6a451b677ef3e","SignedParameters":null,"ComponentName":"ih:registration.action"};
+</script><div id="id6a451b677ef3e" data-bx-vue-component data-template="ih" data-name="registration.action" data-index="blog" ><div class="registration__auth-plug"></div></div>                    </section>
+                
+                <section class="blog-detail-info">
+                    
+                                          <div class="blog-detail-image-sources">
+                        <p><i>Источники изображений: magnific.com</i></p>
+                      </div>
+                    
+                    <ul class="list">
+                        <li class="list-item">30.06.2026 11:46:41</li>
+                        <li class="list-item"><i class="icon-blog-views"></i>21</li>
+                        <li class="list-item"><i class="icon-blog-comments"></i>0</li>
+                    </ul>
+                                    </section>
+                <aside class="blog-detail-socials">
+                    <span>Поделиться</span>
+                    <i class="icon-blog-left-long-arrow"></i>
+                    <a href="#" onclick="Share.vkontakte('https://info-hit.ru/blog/gormonalnyy-balans-chto-est-chtoby-snizit-pms-i-oblegchit-menopauzu-4470f74a/','Гормональный баланс: что есть, чтобы снизить ПМС и облегчить менопаузу','https://info-hit.ruhttps://290320.selcdn.ru/info-hit.ru/resize_cache/1639005/14d8af541550fd5b67be3879138bacae/iblock/8a0/8a06a1ea8d4b1808d71efbfe31411047/portrait_woman_checking_grocery_list_looking_vegetables_holding_notebook_reading_recipe_while.jpg','33','335692','LIKE_VK'); return false;"><img src="/local/templates/ih_blog/components/bitrix/news.detail/blog_detail/img/vk.svg" alt=""></a>
+                </aside>
+                <section class="blog-detail-comments">
+                    <div class="h4">Комментариев к материалу: 0</div>
+                                        <div id="bxdynamic_jxX10R_start" style="display:none"></div>    <div class="burlakastudio_realcommenter"
+    data-talk-id="7"
+    data-talk-url="/blog/gormonalnyy-balans-chto-est-chtoby-snizit-pms-i-oblegchit-menopauzu-4470f74a/"
+    data-talk-hash="dd32a"
+    id="itape"
+    >
+    
+                <div
+            class="br_comment"
+                    >
+            
+<div class="brn_add" data-new-comment="top">
+	<div class="brna_form _ambushed" data-zero="top">
+		<div class="brf_header"></div>
+		<div class="brf_body">
+			<div class="brfb_msg">
+				<textarea autocomplete="off"></textarea>
+				<em>Написать</em>
+			</div>
+		</div>
+	</div>
+</div>
+            <div class="br_node"></div>
+        </div>
+    
+    <div class="br_tree" id="itape_7">
+        </div>
+        <input type="hidden" data-outside-var='a:5:{s:13:"ADMIN_OPTIONS";b:0;s:10:"STATIC_URL";s:83:"/blog/gormonalnyy-balans-chto-est-chtoby-snizit-pms-i-oblegchit-menopauzu-4470f74a/";s:9:"IBLOCK_ID";i:33;s:10:"ELEMENT_ID";i:335692;s:4:"HASH";s:32:"b0b901dc68381e7d31e4d5f2246d8ba6";}' value="">
+            </div>
+    <div id="bxdynamic_jxX10R_end" style="display:none"></div>                </section>
+            </article>
+        </div>
+    </section>
+    <section class="blog-detail-new">
+        <div class="container">
+            <div class="more-items-title">Читайте также</div>
+            
+<div class="blog-swiper bottom-slider blog-slider swiper-container">
+    <div class="swiper-wrapper">
+                                <a href="/blog/neyroplastichnost-dlya-chaynikov-76fa13a2/" class="swiper-slide" style="background-image: url('https://290320.selcdn.ru/info-hit.ru/resize_cache/1637103/3f197e6dffbbdb00c051e86541c96cef/iblock/020/02024a354da1fe813e0983dba9e75771/developer_wearing_vr_headset_looking_artificial_intelligence_hologram.jpg')" id="bx_3218110189_335493">
+                <div class="filter gradient-turquoise-blue" style="opacity: 0.75;"></div>
+                <i class="icon-blog-spinner"></i>
+                                    <div class="swiper-slide-title">Нейропластичность для чайников</div>
+                                <p>Как заставить мозг учиться новому в любом возрасте?</p>
+                <div class="swiper-slide-bottom">
+                    <ul class="list">
+                        <li class="list-item">11.06.2026</li>
+                        <li class="list-item"><i class="icon-blog-views"></i>201</li>
+                        <li class="list-item"><i class="icon-blog-comments"></i>0</li>
+                                            </ul>
+                    <span>Здоровье</span>
+                </div>
+            </a>
+                                <a href="/blog/priznaki-togo-chto-organizm-krichit-o-defitsite-vitaminov-i-chto-delat-571812b1/" class="swiper-slide" style="background-image: url('/upload/dev2fun.imagecompress/webp/resize_cache/iblock/520/p87gj5hf2odrwdyu6r0vku4wkrvoh6vr/316_410_2/unhappy_tired_young_.webp')" id="bx_3218110189_335161">
+                <div class="filter gradient-green-dark" style="opacity: 0.75;"></div>
+                <i class="icon-blog-spinner"></i>
+                                    <div class="swiper-slide-title">Признаки того, что организм кричит о дефиците витаминов (и что делать)</div>
+                                <p>Пять неочевидных признаков того, что организму не хватает витаминов и минералов (даже когда анализы в норме)</p>
+                <div class="swiper-slide-bottom">
+                    <ul class="list">
+                        <li class="list-item">20.05.2026</li>
+                        <li class="list-item"><i class="icon-blog-views"></i>256</li>
+                        <li class="list-item"><i class="icon-blog-comments"></i>0</li>
+                                            </ul>
+                    <span>Здоровье</span>
+                </div>
+            </a>
+                                <a href="/blog/kak-opredelit-defitsit-vitaminov-v-organizme/" class="swiper-slide" style="background-image: url('/upload/dev2fun.imagecompress/webp/resize_cache/iblock/db9/pjxwerjngyif4qcd9op4ywylx76fpyin/316_410_2/1493.webp')" id="bx_3218110189_333607">
+                <div class="filter gradient-light-blue" style="opacity: 0.75;"></div>
+                <i class="icon-blog-spinner"></i>
+                                    <div class="swiper-slide-title">ТОП-5 дефицитов, которые управляют вашим самочувствием</div>
+                                <p>Со специалистами МИФИМ разбираемся, что недополучает ваш организм и как все исправить</p>
+                <div class="swiper-slide-bottom">
+                    <ul class="list">
+                        <li class="list-item">23.01.2026</li>
+                        <li class="list-item"><i class="icon-blog-views"></i>605</li>
+                        <li class="list-item"><i class="icon-blog-comments"></i>0</li>
+                                            </ul>
+                    <span>Здоровье</span>
+                </div>
+            </a>
+                                <a href="/blog/kak-opredelit-sboy-v-organizme-i-naladit-rabotu-zhkt/" class="swiper-slide" style="background-image: url('/upload/dev2fun.imagecompress/webp/resize_cache/iblock/7f6/l9ydsnsirnggeylv2e0qgxr5dq3xb2u7/316_410_2/2151201964.webp')" id="bx_3218110189_333079">
+                <div class="filter gradient-green-light" style="opacity: 0.75;"></div>
+                <i class="icon-blog-spinner"></i>
+                                    <div class="swiper-slide-title">Как самостоятельно определить, где сбой в организме, и наладить работу ЖКТ</div>
+                                <p>От диагностики к действию: что делать, чтобы всегда чувствовать себя комфортно</p>
+                <div class="swiper-slide-bottom">
+                    <ul class="list">
+                        <li class="list-item">12.12.2025</li>
+                        <li class="list-item"><i class="icon-blog-views"></i>509</li>
+                        <li class="list-item"><i class="icon-blog-comments"></i>0</li>
+                                            </ul>
+                    <span>Здоровье</span>
+                </div>
+            </a>
+                                <a href="/blog/pitanie-zamedlyayushchee-starenie/" class="swiper-slide" style="background-image: url('/upload/dev2fun.imagecompress/webp/resize_cache/iblock/774/i5vbcs351g55relhgk23y8dykx7h6o9g/316_410_2/farhad_ibrahimzade_o_edXDLjlZ8_unsplash-_1_.webp')" id="bx_3218110189_332065">
+                <div class="filter gradient-turquoise-yellow" style="opacity: 0.75;"></div>
+                <i class="icon-blog-spinner"></i>
+                                    <div class="swiper-slide-title">Антивозрастная диета: питание замедляющее старение</div>
+                                <p>Эксперты МИФИМ рассказали о том, что есть, чтобы надолго оставаться молодыми.</p>
+                <div class="swiper-slide-bottom">
+                    <ul class="list">
+                        <li class="list-item">16.10.2025</li>
+                        <li class="list-item"><i class="icon-blog-views"></i>780</li>
+                        <li class="list-item"><i class="icon-blog-comments"></i>0</li>
+                                            </ul>
+                    <span>Здоровье</span>
+                </div>
+            </a>
+                                <a href="/blog/laboratornye-markery-stareniya-gid-dlya-zhenshchin-88c0b72a/" class="swiper-slide" style="background-image: url('https://290320.selcdn.ru/info-hit.ru/resize_cache/1607451/3f197e6dffbbdb00c051e86541c96cef/iblock/66a/66a639ac3974cafa3921a7683ad7227d/laboratornye_prinadleznosti_dla_medicinskoi_raboty.jpg')" id="bx_3218110189_331684">
+                <div class="filter gradient-blue-orange" style="opacity: 0.75;"></div>
+                <i class="icon-blog-spinner"></i>
+                                    <div class="swiper-slide-title">Лабораторные маркеры старения: гид для женщин</div>
+                                <p>Какие анализы помогают отследить старение организма и сохранить здоровье дольше</p>
+                <div class="swiper-slide-bottom">
+                    <ul class="list">
+                        <li class="list-item">25.09.2025</li>
+                        <li class="list-item"><i class="icon-blog-views"></i>517</li>
+                        <li class="list-item"><i class="icon-blog-comments"></i>0</li>
+                                            </ul>
+                    <span>Здоровье</span>
+                </div>
+            </a>
+                                <a href="/blog/tri-biologicheskikh-vozrasta-zhenshchiny-38ab6fea/" class="swiper-slide" style="background-image: url('https://290320.selcdn.ru/info-hit.ru/resize_cache/1607448/3f197e6dffbbdb00c051e86541c96cef/iblock/ed9/ed97b4e0aebcd704450c00aab1719993/srednii_plan_zensin_i_detei_na_trave.jpg')" id="bx_3218110189_331683">
+                <div class="filter gradient-blue-orange" style="opacity: 0.75;"></div>
+                <i class="icon-blog-spinner"></i>
+                                    <div class="swiper-slide-title">Три биологических возраста женщины</div>
+                                <p>Что такое метаболический, гормональный и коллагеновый возраст и как они влияют на здоровье</p>
+                <div class="swiper-slide-bottom">
+                    <ul class="list">
+                        <li class="list-item">25.09.2025</li>
+                        <li class="list-item"><i class="icon-blog-views"></i>476</li>
+                        <li class="list-item"><i class="icon-blog-comments"></i>0</li>
+                                            </ul>
+                    <span>Здоровье</span>
+                </div>
+            </a>
+                                <a href="/blog/rasprostranennye-mify-o-molodosti-i-krasote-2fd392b0/" class="swiper-slide" style="background-image: url('https://290320.selcdn.ru/info-hit.ru/resize_cache/1607446/3f197e6dffbbdb00c051e86541c96cef/iblock/6a2/6a241d3e4bc5143db1ce72830928e95b/udovletvorennaa_brunetka_s_ideal_noi_zdorovoi_kozei_ukazyvaet_na_seku.jpg')" id="bx_3218110189_331682">
+                <div class="filter gradient-blue-orange" style="opacity: 0.75;"></div>
+                <i class="icon-blog-spinner"></i>
+                                    <div class="swiper-slide-title">Распространенные мифы о молодости и красоте</div>
+                                <p>Почему популярные советы о сохранении молодости не работают и чем их заменить</p>
+                <div class="swiper-slide-bottom">
+                    <ul class="list">
+                        <li class="list-item">25.09.2025</li>
+                        <li class="list-item"><i class="icon-blog-views"></i>547</li>
+                        <li class="list-item"><i class="icon-blog-comments"></i>0</li>
+                                            </ul>
+                    <span>Здоровье</span>
+                </div>
+            </a>
+                                <a href="/blog/pyat-faktorov-kotorye-uskoryayut-starenie-organizma--136c6d60/" class="swiper-slide" style="background-image: url('https://290320.selcdn.ru/info-hit.ru/resize_cache/1607439/3f197e6dffbbdb00c051e86541c96cef/iblock/555/555f5bb41fafcab07060e59cd58199bc/zrelaa_zensina_s_lomtikami_ogurca_na_glazah.jpg')" id="bx_3218110189_331678">
+                <div class="filter gradient-purple-pink-peach" style="opacity: 0.75;"></div>
+                <i class="icon-blog-spinner"></i>
+                                    <div class="swiper-slide-title">Пять факторов, которые ускоряют старение организма </div>
+                                <p>Почему важно замечать первые сигналы старения и что на самом деле ускоряет этот процесс</p>
+                <div class="swiper-slide-bottom">
+                    <ul class="list">
+                        <li class="list-item">25.09.2025</li>
+                        <li class="list-item"><i class="icon-blog-views"></i>370</li>
+                        <li class="list-item"><i class="icon-blog-comments"></i>0</li>
+                                            </ul>
+                    <span>Здоровье</span>
+                </div>
+            </a>
+                                <a href="/blog/gormony-i-zhenskoe-zdorove-posle-30-let-20786c49/" class="swiper-slide" style="background-image: url('https://290320.selcdn.ru/info-hit.ru/resize_cache/1607429/3f197e6dffbbdb00c051e86541c96cef/iblock/f36/f363b80ace91fadd5d9de303ec282f78/krasivoe_telo_zensiny_s_zabotoi_tela_i_orhidei_belogo_cvetka.jpg')" id="bx_3218110189_331676">
+                <div class="filter gradient-blue-purple-pink" style="opacity: 0.75;"></div>
+                <i class="icon-blog-spinner"></i>
+                                    <div class="swiper-slide-title">Гормоны и женское здоровье после 30 лет</div>
+                                <p>Как понять сигналы организма и поддержать гормоны в равновесии</p>
+                <div class="swiper-slide-bottom">
+                    <ul class="list">
+                        <li class="list-item">25.09.2025</li>
+                        <li class="list-item"><i class="icon-blog-views"></i>445</li>
+                        <li class="list-item"><i class="icon-blog-comments"></i>0</li>
+                                            </ul>
+                    <span>Здоровье</span>
+                </div>
+            </a>
+                                <a href="/blog/intuitivnoe-pitanie-chto-eto-takoe-i-kak-nachat/" class="swiper-slide" style="background-image: url('/upload/dev2fun.imagecompress/webp/resize_cache/iblock/5e4/y2xzackkv7ert7hi41elthbzxy00lsbq/316_410_2/1-1648286644.webp')" id="bx_3218110189_330719">
+                <div class="filter gradient-dark-turquoise" style="opacity: 0.75;"></div>
+                <i class="icon-blog-spinner"></i>
+                                    <div class="swiper-slide-title">Интуитивное питание: что это такое и как на него перейти</div>
+                                <p>Как научиться понимать сигналы тела, отказаться от диет и восстановить связи с настоящими потребностями организма</p>
+                <div class="swiper-slide-bottom">
+                    <ul class="list">
+                        <li class="list-item">15.08.2025</li>
+                        <li class="list-item"><i class="icon-blog-views"></i>507</li>
+                        <li class="list-item"><i class="icon-blog-comments"></i>0</li>
+                                            </ul>
+                    <span>Здоровье</span>
+                </div>
+            </a>
+                                <a href="/blog/pitanie-pri-stresse-i-trevoge/" class="swiper-slide" style="background-image: url('/upload/dev2fun.imagecompress/webp/resize_cache/iblock/ca9/3df2vrm0scmwlmib6cd7iol86jnu738l/316_410_2/1-1648286644.webp')" id="bx_3218110189_330382">
+                <div class="filter gradient-purple-green" style="opacity: 0.75;"></div>
+                <i class="icon-blog-spinner"></i>
+                                    <div class="swiper-slide-title">Питание и стресс: какие продукты помогают справляться с тревожностью</div>
+                                <p>Выбирая то, что оказывается на тарелке, человек может либо усугубить нервное напряжение, либо постепенно вернуть внутреннее равновесие</p>
+                <div class="swiper-slide-bottom">
+                    <ul class="list">
+                        <li class="list-item">30.07.2025</li>
+                        <li class="list-item"><i class="icon-blog-views"></i>427</li>
+                        <li class="list-item"><i class="icon-blog-comments"></i>0</li>
+                                            </ul>
+                    <span>Здоровье</span>
+                </div>
+            </a>
+                                <a href="/blog/obzor-luchshikh-onlayn-fitnes-platform/" class="swiper-slide" style="background-image: url('/upload/dev2fun.imagecompress/webp/resize_cache/iblock/e06/euzcweudeqm7qckoautjnj73rbdvpi7s/316_410_2/stan_georgiev_pvNxRUq7O7U_unsplash.webp')" id="bx_3218110189_330130">
+                <div class="filter gradient-blue-purple-pink" style="opacity: 0.75;"></div>
+                <i class="icon-blog-spinner"></i>
+                                    <div class="swiper-slide-title">ТОП-5 сервисов и приложений для тренировок дома в 2025 году</div>
+                                <p>Сравнили форматы, цены и преимущества</p>
+                <div class="swiper-slide-bottom">
+                    <ul class="list">
+                        <li class="list-item">23.07.2025</li>
+                        <li class="list-item"><i class="icon-blog-views"></i>3343</li>
+                        <li class="list-item"><i class="icon-blog-comments"></i>0</li>
+                                            </ul>
+                    <span>Здоровье</span>
+                </div>
+            </a>
+                                <a href="/blog/nutritsiologiya-i-dietologiya-otlichiya/" class="swiper-slide" style="background-image: url('/upload/dev2fun.imagecompress/webp/resize_cache/iblock/113/zev1qmillin9d8zdsursplw33tr8m9fd/316_410_2/2148302133.webp')" id="bx_3218110189_327473">
+                <div class="filter gradient-purple-green" style="opacity: 0.75;"></div>
+                <i class="icon-blog-spinner"></i>
+                                    <div class="swiper-slide-title">Нутрициология и диетология: в чем отличие</div>
+                                <p>Образование, навыки, методы работы нутрициолога и диетолога</p>
+                <div class="swiper-slide-bottom">
+                    <ul class="list">
+                        <li class="list-item">11.04.2025</li>
+                        <li class="list-item"><i class="icon-blog-views"></i>758</li>
+                        <li class="list-item"><i class="icon-blog-comments"></i>0</li>
+                                            </ul>
+                    <span>Здоровье</span>
+                </div>
+            </a>
+                                <a href="/blog/raskroyte-silu-bogini-izmenite-svoyu-zhizn-a54a8651/" class="swiper-slide" style="background-image: url('/upload/dev2fun.imagecompress/webp/resize_cache/iblock/b12/2ba3j0tglhjgfkz6o6sbwy2idh9eotmz/316_410_2/photo_2025_04_05_12_50_30.webp')" id="bx_3218110189_327319">
+                <div class="filter gradient-yellow-orange" style="opacity: 0.75;"></div>
+                <i class="icon-blog-spinner"></i>
+                                    <div class="swiper-slide-title">Как избавиться от Стресса за 80 Минут: курс Антистресс для Женщин</div>
+                                <p>Устали жить в напряжении? Хотите вернуть внутреннюю гармонию и контроль над жизнью?</p>
+                <div class="swiper-slide-bottom">
+                    <ul class="list">
+                        <li class="list-item">10.04.2025</li>
+                        <li class="list-item"><i class="icon-blog-views"></i>480</li>
+                        <li class="list-item"><i class="icon-blog-comments"></i>0</li>
+                                            </ul>
+                    <span>Здоровье</span>
+                </div>
+            </a>
+                                <a href="/blog/kak-podsoznanie-vliyaet-na-nashu-zhizn/" class="swiper-slide" style="background-image: url('/upload/dev2fun.imagecompress/webp/resize_cache/iblock/12a/5suh1bckh0552d2tb1xobs86mmlwoj9k/316_410_2/ramon_salinero_vEE00Hx5d0Q_unsplash.webp')" id="bx_3218110189_326548">
+                <div class="filter gradient-dark-purple" style="opacity: 0.75;"></div>
+                <i class="icon-blog-spinner"></i>
+                                    <div class="swiper-slide-title">Влияние подсознания на человека: как договориться с подсознанием и улучшить жизнь</div>
+                                <p>Узнали у Владимира Вейда, существует ли подсознание: что об этом говорят ученые, — и можно ли им управлять</p>
+                <div class="swiper-slide-bottom">
+                    <ul class="list">
+                        <li class="list-item">26.02.2025</li>
+                        <li class="list-item"><i class="icon-blog-views"></i>1220</li>
+                        <li class="list-item"><i class="icon-blog-comments"></i>0</li>
+                                            </ul>
+                    <span>Здоровье</span>
+                </div>
+            </a>
+            </div>
+            <i class="icon-blog-left-long-arrow swiper-button-prev"></i>
+        <i class="icon-blog-left-long-arrow swiper-button-next"></i>
+    </div>
+        </div>
+    </section>
+</main>
+
+
+  
+<script type='module' crossorigin src='/dist/client/assets/bitrixVueComponent-DMB0ruT4.js' data-vite data-vite-script data-entry='bitrix-components/index2.tsx' data-params=''></script><link rel='modulepreload' href='/dist/client/assets/preload-helper-CYYjKWaH.js' data-vite data-vite-link><link rel='modulepreload' href='/dist/client/assets/dynamic-import-helper-BheWnx7M.js' data-vite data-vite-link><link rel='modulepreload' href='/dist/client/assets/index-BwLeDvwj.js' data-vite data-vite-link><link rel='modulepreload' href='/dist/client/assets/composite-DHeG-FCO.js' data-vite data-vite-link><link rel='modulepreload' href='/dist/client/assets/runtime-dom.esm-bundler-BJV3yH6U.js' data-vite data-vite-link><link rel='modulepreload' href='/dist/client/assets/toast-options-5iMEmrt0.js' data-vite data-vite-link><link rel='modulepreload' href='/dist/client/assets/index-CUEpVGaV.js' data-vite data-vite-link><link rel='modulepreload' href='/dist/client/assets/index-B-SnUUMX.js' data-vite data-vite-link><link rel='modulepreload' href='/dist/client/assets/index-eUHAkj_g.js' data-vite data-vite-link><link rel='modulepreload' href='/dist/client/assets/fieldUtilsDirective-Bhw4AqYY.js' data-vite data-vite-link><link rel='stylesheet' href='/dist/client/assets/index-BIXY12BP.css' data-vite data-vite-link><link rel='stylesheet' href='/dist/client/assets/toast-options-CG4knqhu.css' data-vite data-vite-link><link rel='stylesheet' href='/dist/client/assets/index-C7FFelxn.css' data-vite data-vite-link><div id="id6a451b677c0b3" class="component-creative-viewer" data-bx-vue-component data-template="ih" data-name="creative.viewer" data-params='{"arResult":{"CREATIVES":[{"PROPERTY_TITLE_VALUE":"\u0412\u0442\u043e\u0440\u043e\u0439 \u0434\u043e\u0445\u043e\u0434 \u0437\u0430&nbsp;2&nbsp;\u0447\u0430\u0441\u0430 \u0432&nbsp;\u0434\u0435\u043d\u044c \u043d\u0430&nbsp;\u043d\u0435\u0439\u0440\u043e\u0441\u0435\u0442\u044f\u0445. \u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0441\u0442\u0438&nbsp;\u2014 \u043d\u0430&nbsp;\u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u043e\u043c \u0432\u0435\u0431\u0438\u043d\u0430\u0440\u0435","PROPERTY_TITLE_VALUE_ID":"335407:1163","PROPERTY_SUBTITLE_VALUE":null,"PROPERTY_SUBTITLE_VALUE_ID":"335407:1164","PROPERTY_ADV_VALUE":"\u0420\u0435\u043a\u043b\u0430\u043c\u0430. \u041e\u041e\u041e \u00ab\u0423\u043d\u0438\u0432\u0435\u0440\u0441\u0443\u0441\u00bb. \u0418\u041d\u041d 7842221437","PROPERTY_ADV_VALUE_ID":"335407:1191","PROPERTY_URL_VALUE":"https:\/\/info-trainer.ru\/2754158?erid=2bL9aMPo2e4BA5qnNJQJbghJ1d","PROPERTY_URL_VALUE_ID":"335407:1161","PROPERTY_BUTTON_TEXT_VALUE":"\u0417\u0430\u043f\u0438\u0441\u0430\u0442\u044c\u0441\u044f","PROPERTY_BUTTON_TEXT_VALUE_ID":"335407:1162","PROPERTY_SECTIONS_VALUE":[],"PROPERTY_TELEGRAM_SETTINGS_VALUE":[],"PROPERTY_AUTHORIZE_SETTINGS_VALUE":[],"PROPERTY_LK_SHOW_VALUE":[],"PROPERTY_COLOR_VALUE":"white","PROPERTY_COLOR_ENUM_ID":955,"PROPERTY_COLOR_VALUE_ID":"335407:1357","SORT":500,"ID":335407,"TIMESTAMP_X":"29.05.2026 22:11:05","TIMESTAMP_X_UNIX":1780081865,"MODIFIED_BY":185055,"DATE_CREATE":"29.05.2026 22:11:05","DATE_CREATE_UNIX":1780081865,"CREATED_BY":185055,"IBLOCK_ID":74,"IBLOCK_SECTION_ID":46742,"ACTIVE":"Y","ACTIVE_FROM_X":null,"ACTIVE_FROM":null,"ACTIVE_TO":null,"DATE_ACTIVE_FROM":null,"DATE_ACTIVE_TO":null,"NAME":"\u041d.\u0412\u043e\u043b\u043e\u0441\u044f\u043d\u043a\u043e\u0432","PREVIEW_PICTURE":1636244,"PREVIEW_TEXT":"","PREVIEW_TEXT_TYPE":"text","DETAIL_PICTURE":null,"DETAIL_TEXT":"","DETAIL_TEXT_TYPE":"text","SEARCHABLE_CONTENT":"\u041d.\u0412\u041e\u041b\u041e\u0421\u042f\u041d\u041a\u041e\u0412\r\n\r\n","WF_STATUS_ID":1,"WF_PARENT_ELEMENT_ID":null,"WF_LAST_HISTORY_ID":null,"WF_NEW":null,"LOCK_STATUS":"green","WF_LOCKED_BY":null,"WF_DATE_LOCK":null,"WF_COMMENTS":null,"IN_SECTIONS":"Y","SHOW_COUNTER":null,"SHOW_COUNTER_START":null,"SHOW_COUNTER_START_X":null,"CODE":"","TAGS":"","XML_ID":335407,"EXTERNAL_ID":335407,"TMP_ID":0,"USER_NAME":"(mrs_karabanova) \u0415\u043a\u0430\u0442\u0435\u0440\u0438\u043d\u0430  \u041a\u0430\u0440\u0430\u0431\u0430\u043d\u043e\u0432\u0430","LOCKED_USER_NAME":null,"CREATED_USER_NAME":"(mrs_karabanova) \u0415\u043a\u0430\u0442\u0435\u0440\u0438\u043d\u0430  \u041a\u0430\u0440\u0430\u0431\u0430\u043d\u043e\u0432\u0430","LANG_DIR":"\/","LID":"s1","IBLOCK_TYPE_ID":"items","IBLOCK_CODE":"creatives","IBLOCK_NAME":"\u041a\u0440\u0435\u0430\u0442\u0438\u0432\u044b","IBLOCK_EXTERNAL_ID":null,"DETAIL_PAGE_URL":"","LIST_PAGE_URL":"","CANONICAL_PAGE_URL":"","CREATED_DATE":"2026.05.29","BP_PUBLISHED":"Y","PROPERTY_SECTIONS_DESCRIPTION":[],"PROPERTY_SECTIONS_PROPERTY_VALUE_ID":[],"PROPERTY_TELEGRAM_SETTINGS_DESCRIPTION":[],"PROPERTY_TELEGRAM_SETTINGS_PROPERTY_VALUE_ID":[],"PROPERTY_AUTHORIZE_SETTINGS_DESCRIPTION":[],"PROPERTY_AUTHORIZE_SETTINGS_PROPERTY_VALUE_ID":[],"PROPERTY_LK_SHOW_DESCRIPTION":[],"PROPERTY_LK_SHOW_PROPERTY_VALUE_ID":[],"PICTURE":{"src":"/upload/dev2fun.imagecompress/webp/resize_cache/iblock/417/lyjzn5l9pbiz08eyi5t0ux5icmjohj9r/50_50_2/free_icon_artificial_intelligence_10988139_2-1.webp","width":50,"height":50,"size":1610},"PROPERTIES":{"TITLE":{"ID":"1163","TIMESTAMP_X":"2026-03-31 09:33:08","IBLOCK_ID":"74","NAME":"\u0417\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a","ACTIVE":"Y","SORT":"100","CODE":"TITLE","DEFAULT_VALUE":"","PROPERTY_TYPE":"S","ROW_COUNT":"1","COL_COUNT":"80","LIST_TYPE":"L","MULTIPLE":"N","XML_ID":null,"FILE_TYPE":"","MULTIPLE_CNT":"5","TMP_ID":null,"LINK_IBLOCK_ID":"0","WITH_DESCRIPTION":"N","SEARCHABLE":"N","FILTRABLE":"N","IS_REQUIRED":"N","VERSION":"2","USER_TYPE":null,"USER_TYPE_SETTINGS":"a:0:{}","HINT":"","PROPERTY_VALUE_ID":"335407:1163","VALUE":"\u0412\u0442\u043e\u0440\u043e\u0439 \u0434\u043e\u0445\u043e\u0434 \u0437\u0430&nbsp;2&nbsp;\u0447\u0430\u0441\u0430 \u0432&nbsp;\u0434\u0435\u043d\u044c \u043d\u0430&nbsp;\u043d\u0435\u0439\u0440\u043e\u0441\u0435\u0442\u044f\u0445. \u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0441\u0442\u0438&nbsp;\u2014 \u043d\u0430&nbsp;\u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u043e\u043c \u0432\u0435\u0431\u0438\u043d\u0430\u0440\u0435","DESCRIPTION":null,"VALUE_ENUM":"","VALUE_XML_ID":null,"VALUE_SORT":null},"SUBTITLE":{"ID":"1164","TIMESTAMP_X":"2026-03-31 09:33:08","IBLOCK_ID":"74","NAME":"\u041f\u043e\u0434\u0437\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a","ACTIVE":"Y","SORT":"200","CODE":"SUBTITLE","DEFAULT_VALUE":"","PROPERTY_TYPE":"S","ROW_COUNT":"2","COL_COUNT":"80","LIST_TYPE":"L","MULTIPLE":"N","XML_ID":null,"FILE_TYPE":"","MULTIPLE_CNT":"5","TMP_ID":null,"LINK_IBLOCK_ID":"0","WITH_DESCRIPTION":"N","SEARCHABLE":"N","FILTRABLE":"N","IS_REQUIRED":"N","VERSION":"2","USER_TYPE":null,"USER_TYPE_SETTINGS":"a:0:{}","HINT":"","PROPERTY_VALUE_ID":"335407:1164","VALUE":"","DESCRIPTION":"","VALUE_ENUM":"","VALUE_XML_ID":null,"VALUE_SORT":null},"URL":{"ID":"1161","TIMESTAMP_X":"2026-03-31 09:33:08","IBLOCK_ID":"74","NAME":"\u0421\u0441\u044b\u043b\u043a\u0430","ACTIVE":"Y","SORT":"300","CODE":"URL","DEFAULT_VALUE":"","PROPERTY_TYPE":"S","ROW_COUNT":"2","COL_COUNT":"80","LIST_TYPE":"L","MULTIPLE":"N","XML_ID":null,"FILE_TYPE":"","MULTIPLE_CNT":"5","TMP_ID":null,"LINK_IBLOCK_ID":"0","WITH_DESCRIPTION":"N","SEARCHABLE":"N","FILTRABLE":"N","IS_REQUIRED":"N","VERSION":"2","USER_TYPE":null,"USER_TYPE_SETTINGS":"a:0:{}","HINT":"","PROPERTY_VALUE_ID":"335407:1161","VALUE":"https:\/\/info-trainer.ru\/2754158?erid=2bL9aMPo2e4BA5qnNJQJbghJ1d","DESCRIPTION":null,"VALUE_ENUM":"","VALUE_XML_ID":null,"VALUE_SORT":null},"BUTTON_TEXT":{"ID":"1162","TIMESTAMP_X":"2026-03-31 09:33:08","IBLOCK_ID":"74","NAME":"\u0422\u0435\u043a\u0441\u0442 \u043d\u0430 \u043a\u043d\u043e\u043f\u043a\u0435","ACTIVE":"Y","SORT":"400","CODE":"BUTTON_TEXT","DEFAULT_VALUE":"","PROPERTY_TYPE":"S","ROW_COUNT":"1","COL_COUNT":"30","LIST_TYPE":"L","MULTIPLE":"N","XML_ID":null,"FILE_TYPE":"","MULTIPLE_CNT":"5","TMP_ID":null,"LINK_IBLOCK_ID":"0","WITH_DESCRIPTION":"N","SEARCHABLE":"N","FILTRABLE":"N","IS_REQUIRED":"N","VERSION":"2","USER_TYPE":null,"USER_TYPE_SETTINGS":"a:0:{}","HINT":"","PROPERTY_VALUE_ID":"335407:1162","VALUE":"\u0417\u0430\u043f\u0438\u0441\u0430\u0442\u044c\u0441\u044f","DESCRIPTION":null,"VALUE_ENUM":"","VALUE_XML_ID":null,"VALUE_SORT":null},"SECTIONS":{"ID":"1169","TIMESTAMP_X":"2026-03-31 09:33:08","IBLOCK_ID":"74","NAME":"\u041f\u0440\u0438\u0432\u044f\u0437\u043a\u0430 \u043a \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0430\u043c \u043a\u0443\u0440\u0441\u043e\u0432","ACTIVE":"Y","SORT":"500","CODE":"SECTIONS","DEFAULT_VALUE":"","PROPERTY_TYPE":"G","ROW_COUNT":"1","COL_COUNT":"30","LIST_TYPE":"L","MULTIPLE":"Y","XML_ID":null,"FILE_TYPE":"","MULTIPLE_CNT":"5","TMP_ID":null,"LINK_IBLOCK_ID":"4","WITH_DESCRIPTION":"N","SEARCHABLE":"N","FILTRABLE":"N","IS_REQUIRED":"N","VERSION":"2","USER_TYPE":"SectionAuto","USER_TYPE_SETTINGS":{"VIEW":"E","SHOW_ADD":"N","MAX_WIDTH":0,"MIN_HEIGHT":24,"MAX_HEIGHT":1000,"BAN_SYM":",;","REP_SYM":" ","OTHER_REP_SYM":"","IBLOCK_MESS":"N"},"HINT":"","PROPERTY_VALUE_ID":false,"VALUE":false,"DESCRIPTION":false,"VALUE_ENUM":null,"VALUE_XML_ID":null,"VALUE_SORT":null},"TELEGRAM_SETTINGS":{"ID":"1170","TIMESTAMP_X":"2026-03-31 09:33:08","IBLOCK_ID":"74","NAME":"\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u043f\u043e\u0434\u043f\u0438\u0441\u043e\u043a \u0432 Telegram","ACTIVE":"Y","SORT":"600","CODE":"TELEGRAM_SETTINGS","DEFAULT_VALUE":"","PROPERTY_TYPE":"L","ROW_COUNT":"1","COL_COUNT":"30","LIST_TYPE":"C","MULTIPLE":"Y","XML_ID":null,"FILE_TYPE":"","MULTIPLE_CNT":"5","TMP_ID":null,"LINK_IBLOCK_ID":"0","WITH_DESCRIPTION":"N","SEARCHABLE":"N","FILTRABLE":"N","IS_REQUIRED":"N","VERSION":"2","USER_TYPE":null,"USER_TYPE_SETTINGS":"a:0:{}","HINT":"","PROPERTY_VALUE_ID":false,"VALUE":false,"DESCRIPTION":false,"VALUE_ENUM":false,"VALUE_XML_ID":false,"VALUE_SORT":false,"VALUE_ENUM_ID":false},"AUTHORIZE_SETTINGS":{"ID":"1172","TIMESTAMP_X":"2026-03-31 09:33:08","IBLOCK_ID":"74","NAME":"\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0430\u0432\u0442\u043e\u0440\u0438\u0437\u0430\u0446\u0438\u0438","ACTIVE":"Y","SORT":"700","CODE":"AUTHORIZE_SETTINGS","DEFAULT_VALUE":"","PROPERTY_TYPE":"L","ROW_COUNT":"1","COL_COUNT":"30","LIST_TYPE":"C","MULTIPLE":"Y","XML_ID":null,"FILE_TYPE":"","MULTIPLE_CNT":"5","TMP_ID":null,"LINK_IBLOCK_ID":"0","WITH_DESCRIPTION":"N","SEARCHABLE":"N","FILTRABLE":"N","IS_REQUIRED":"N","VERSION":"2","USER_TYPE":null,"USER_TYPE_SETTINGS":"a:0:{}","HINT":"","PROPERTY_VALUE_ID":false,"VALUE":false,"DESCRIPTION":false,"VALUE_ENUM":false,"VALUE_XML_ID":false,"VALUE_SORT":false,"VALUE_ENUM_ID":false},"ADV":{"ID":"1191","TIMESTAMP_X":"2026-03-31 09:33:08","IBLOCK_ID":"74","NAME":"\u041f\u043e\u0434\u043f\u0438\u0441\u044c (\u0434\u043b\u044f \u0440\u0435\u043a\u043b\u0430\u043c\u044b)","ACTIVE":"Y","SORT":"800","CODE":"ADV","DEFAULT_VALUE":"","PROPERTY_TYPE":"S","ROW_COUNT":"1","COL_COUNT":"80","LIST_TYPE":"L","MULTIPLE":"N","XML_ID":null,"FILE_TYPE":"","MULTIPLE_CNT":"5","TMP_ID":null,"LINK_IBLOCK_ID":"0","WITH_DESCRIPTION":"N","SEARCHABLE":"N","FILTRABLE":"N","IS_REQUIRED":"N","VERSION":"2","USER_TYPE":null,"USER_TYPE_SETTINGS":"a:0:{}","HINT":"","PROPERTY_VALUE_ID":"335407:1191","VALUE":"\u0420\u0435\u043a\u043b\u0430\u043c\u0430. \u041e\u041e\u041e \u00ab\u0423\u043d\u0438\u0432\u0435\u0440\u0441\u0443\u0441\u00bb. \u0418\u041d\u041d 7842221437","DESCRIPTION":null,"VALUE_ENUM":"","VALUE_XML_ID":null,"VALUE_SORT":null},"LK_SHOW":{"ID":"1304","TIMESTAMP_X":"2026-03-31 09:33:08","IBLOCK_ID":"74","NAME":"\u0412\u044b\u0432\u043e\u0434\u0438\u0442\u044c \u041b\u041a","ACTIVE":"Y","SORT":"900","CODE":"LK_SHOW","DEFAULT_VALUE":"","PROPERTY_TYPE":"L","ROW_COUNT":"1","COL_COUNT":"30","LIST_TYPE":"C","MULTIPLE":"Y","XML_ID":null,"FILE_TYPE":"","MULTIPLE_CNT":"5","TMP_ID":null,"LINK_IBLOCK_ID":"0","WITH_DESCRIPTION":"N","SEARCHABLE":"N","FILTRABLE":"N","IS_REQUIRED":"N","VERSION":"2","USER_TYPE":null,"USER_TYPE_SETTINGS":"a:0:{}","HINT":"","PROPERTY_VALUE_ID":false,"VALUE":false,"DESCRIPTION":false,"VALUE_ENUM":false,"VALUE_XML_ID":false,"VALUE_SORT":false,"VALUE_ENUM_ID":false},"COLOR":{"ID":"1357","TIMESTAMP_X":"2026-03-31 09:33:08","IBLOCK_ID":"74","NAME":"\u0426\u0432\u0435\u0442 \u0444\u043e\u043d\u0430","ACTIVE":"Y","SORT":"1000","CODE":"COLOR","DEFAULT_VALUE":"","PROPERTY_TYPE":"L","ROW_COUNT":"1","COL_COUNT":"30","LIST_TYPE":"L","MULTIPLE":"N","XML_ID":null,"FILE_TYPE":"","MULTIPLE_CNT":"5","TMP_ID":null,"LINK_IBLOCK_ID":"0","WITH_DESCRIPTION":"N","SEARCHABLE":"N","FILTRABLE":"N","IS_REQUIRED":"N","VERSION":"2","USER_TYPE":null,"USER_TYPE_SETTINGS":null,"HINT":"","PROPERTY_VALUE_ID":"335407:1357","VALUE":"white","DESCRIPTION":null,"VALUE_ENUM":"white","VALUE_XML_ID":"1","VALUE_SORT":"500","VALUE_ENUM_ID":"955"}}}],"IDS":[335407]},"arParams":{"SCHEMA":{"TEMPLATE":"blog-sticky","IBLOCK_SECTION":{"filter":[46742]}},"CACHE_TYPE":"A","USER_ID":0},"wrapperId":"id6a451b677c0b3","SignedParameters":null,"ComponentName":"ih:creative.viewer"}' ></div>    <footer class="footer blog-section">
+        <div class="container">
+            <img src="/local/templates/ih_blog/img/footer-logo.svg" alt="Логотип" class="footer-logo">
+            
+<nav class="footer-menu">
+            <a href="/about/"
+           class="footer-menu-item"
+                   >
+            О проекте        </a>
+            <a href="https://t.me/ih_school_support_bot"
+           class="footer-menu-item"
+           target="_blank"        >
+            Предложить тему        </a>
+            <a href="/about/go-to-top/"
+           class="footer-menu-item"
+                   >
+            Реклама        </a>
+            <a href="/catalog/"
+           class="footer-menu-item"
+                   >
+            Каталог курсов        </a>
+            <a href="/professions/"
+           class="footer-menu-item"
+                   >
+            Профессии        </a>
+            <a href="https://vk.com/infohitru"
+           class="footer-menu-item"
+           target="_blank"        >
+            Вконтакте        </a>
+            <a href="/include/telegram/join/?sid=46215&creativeId=318168"
+           class="footer-menu-item"
+           target="_blank"        >
+            Telegram        </a>
+            <a href="https://dzen.ru/infohit"
+           class="footer-menu-item"
+           target="_blank"        >
+            Дзен        </a>
+            <a href="https://t.me/infohit_rabota"
+           class="footer-menu-item"
+           target="_blank"        >
+            Чат специалистов        </a>
+    </nav>            <p class="footer-copyright">Любое использование или копирование материалов сайта, элементов дизайна и оформления допускается лишь с разрешения правообладателя и только со ссылкой на источник: info-hit.ru<br /><span>© ООО «ИнфоХит», 2012 — 2026</span></p>
+        </div>
+    </footer>
+
+                <div id="loginWindow" class="form-wrap" style="display:none;">
+                <div class="ihit-reg-popup" data-href="/include/ajax-auth-768309823868324.php">
+                    <div class="ihit-reg-popup-container">
+                        <div class="window-loader"><i class="fa fa-spinner fa-spin"></i></div>
+                    </div>
+                </div>
+            </div>
+        
+
+<!-- Yandex.Metrika с вебвизором (новая версия) -->
+<noscript>
+    <div>
+        <img src="https://mc.yandex.ru/watch/17951839" style="position:absolute; left:-9999px;" alt="" />
+            </div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
+<script>if(localStorage.getItem('ihb_no_banner')){document.documentElement.classList.add('ihb-hidden');}</script>
+<script>window.__phpStore = {};</script>
+<script>if(!window.BX)window.BX={};if(!window.BX.message)window.BX.message=function(mess){if(typeof mess==='object'){for(let i in mess) {BX.message[i]=mess[i];} return true;}};</script>
+<script>(window.BX||top.BX).message({"JS_CORE_LOADING":"Загрузка...","JS_CORE_NO_DATA":"- Нет данных -","JS_CORE_WINDOW_CLOSE":"Закрыть","JS_CORE_WINDOW_EXPAND":"Развернуть","JS_CORE_WINDOW_NARROW":"Свернуть в окно","JS_CORE_WINDOW_SAVE":"Сохранить","JS_CORE_WINDOW_CANCEL":"Отменить","JS_CORE_WINDOW_CONTINUE":"Продолжить","JS_CORE_H":"ч","JS_CORE_M":"м","JS_CORE_S":"с","JSADM_AI_HIDE_EXTRA":"Скрыть лишние","JSADM_AI_ALL_NOTIF":"Показать все","JSADM_AUTH_REQ":"Требуется авторизация!","JS_CORE_WINDOW_AUTH":"Войти","JS_CORE_IMAGE_FULL":"Полный размер"});</script><script src="/bitrix/js/main/core/core.min.js?1747032603225353"></script><script>BX.Runtime.registerExtension({"name":"main.core","namespace":"BX","loaded":true});</script>
+<script>BX.setJSList(["\/bitrix\/js\/main\/core\/core_ajax.js","\/bitrix\/js\/main\/core\/core_promise.js","\/bitrix\/js\/main\/polyfill\/promise\/js\/promise.js","\/bitrix\/js\/main\/loadext\/loadext.js","\/bitrix\/js\/main\/loadext\/extension.js","\/bitrix\/js\/main\/polyfill\/promise\/js\/promise.js","\/bitrix\/js\/main\/polyfill\/find\/js\/find.js","\/bitrix\/js\/main\/polyfill\/includes\/js\/includes.js","\/bitrix\/js\/main\/polyfill\/matches\/js\/matches.js","\/bitrix\/js\/ui\/polyfill\/closest\/js\/closest.js","\/bitrix\/js\/main\/polyfill\/fill\/main.polyfill.fill.js","\/bitrix\/js\/main\/polyfill\/find\/js\/find.js","\/bitrix\/js\/main\/polyfill\/matches\/js\/matches.js","\/bitrix\/js\/main\/polyfill\/core\/dist\/polyfill.bundle.js","\/bitrix\/js\/main\/core\/core.js","\/bitrix\/js\/main\/polyfill\/intersectionobserver\/js\/intersectionobserver.js","\/bitrix\/js\/main\/lazyload\/dist\/lazyload.bundle.js","\/bitrix\/js\/main\/polyfill\/core\/dist\/polyfill.bundle.js","\/bitrix\/js\/main\/parambag\/dist\/parambag.bundle.js"]);
+</script>
+<script>BX.Runtime.registerExtension({"name":"ui.dexie","namespace":"BX.Dexie3","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"ls","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"fx","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"fc","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"intersection-observer-polyfill","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"ajax-lazy-load","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"dl-animate","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"ih_compare_ajax","namespace":"window","loaded":true});</script>
+<script>(window.BX||top.BX).message({"FORM_REQUIRED_INPUTS_MSG":"Заполните ещё ","FORM_REQUIRED_INPUTS_CASE_1":" поле","FORM_REQUIRED_INPUTS_CASE_2":" поля","FORM_REQUIRED_INPUTS_CASE_3":" полей","agree_to_del_uploaded_file":"Да","itape_filter_fired_on":"Недопустимо использовать: ","itape_filter_by_tag_fired_on":"Запрещено использовать тег: ","custom_gallery_image_data_attribute":"data-image-id","drag_n_drop.js":"\/bitrix\/js\/burlakastudio.realcommenter\/drag_n_drop.min.js?1619858857","talk_gallery.js":"\/bitrix\/js\/burlakastudio.realcommenter\/talk_gallery.min.js?1619858857","browser_hash.js":"\/bitrix\/js\/burlakastudio.realcommenter\/browser_hash.min.js?1619858857","drag_and_fire.js":"\/bitrix\/js\/burlakastudio.realcommenter\/drag_and_fire.min.js?1619858857"});</script>
+<script>BX.Runtime.registerExtension({"name":"realcommenter_tree","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"realcommenter_form","namespace":"window","loaded":true});</script>
+<script>(window.BX||top.BX).message({"LANGUAGE_ID":"ru","FORMAT_DATE":"DD.MM.YYYY","FORMAT_DATETIME":"DD.MM.YYYY HH:MI:SS","COOKIE_PREFIX":"BITRIX_SM","SERVER_TZ_OFFSET":"10800","UTF_MODE":"Y","SITE_ID":"s1","SITE_DIR":"\/"});</script><script  src="/bitrix/cache/js/s1/ih_blog/kernel_main/kernel_main_v1.js?1781171180158469"></script>
+<script src="/bitrix/js/ui/dexie/dist/dexie3.bundle.min.js?171108601488274"></script>
+<script src="/bitrix/js/main/core/core_ls.min.js?17470325692683"></script>
+<script src="/bitrix/js/main/core/core_frame_cache.min.js?174703256911132"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/bitrix/js/burlakastudio.realcommenter/talk_tree.min.js?175361873315542"></script>
+<script src="/bitrix/js/burlakastudio.realcommenter/talk_form.min.js?162133613314754"></script>
+<script>BX.setJSList(["\/bitrix\/js\/main\/core\/core_fx.js","\/bitrix\/js\/main\/session.js","\/bitrix\/js\/main\/pageobject\/pageobject.js","\/bitrix\/js\/main\/core\/core_window.js","\/bitrix\/js\/main\/utils.js","\/bitrix\/js\/main\/date\/main.date.js","\/bitrix\/js\/main\/core\/core_date.js","\/local\/templates\/ih_blog\/components\/bitrix\/news.detail\/blog_detail\/script.js","\/include\/elements\/intersection-observer-polyfill\/intersection-observer.min.js","\/include\/elements\/ajax-lazy-load\/script.min.js","\/include\/elements\/dl-animate\/dl-animate.js","\/include\/elements\/compare_ajax\/script.js","\/local\/templates\/.default\/components\/bitrix\/system.pagenavigation\/simple-scroll\/script.js","\/local\/templates\/.default\/components\/bitrix\/news.list\/blog_list_tile\/script.js","\/bitrix\/tools\/step2use.redirects\/js\/comp_js.js","\/local\/js\/tools\/passive_fix.min.js","\/local\/js\/fancybox\/jquery.fancybox.min.js","\/local\/js\/swiper\/swiper-bundle.min.js","\/local\/js\/swiper\/swiper.js","\/local\/js\/ih\/lazyload.min.js","\/local\/js\/tools\/jquery.cookie.js","\/local\/templates\/ih_blog\/js\/app.min.js","\/include\/svg\/script.js","\/local\/components\/ih\/search.title\/script.js","\/local\/components\/ih\/check.user_fields\/templates\/no-email-popup\/script.js","\/include\/js\/frame_cache_loaded.js"]);</script>
+<script>BX.setCSSList(["\/local\/templates\/ih_blog\/components\/bitrix\/news.detail\/blog_detail\/style.css","\/local\/templates\/.default\/components\/bitrix\/advertising.banner\/banner-vertical\/style.css","\/include\/elements\/ajax-lazy-load\/style.css","\/include\/elements\/compare_ajax\/style.css","\/local\/components\/ih\/registration.action\/templates\/.default\/style.css","\/bitrix\/components\/realcommenter_2.0\/tape.show.tree\/templates\/ih\/style.css","\/local\/templates\/.default\/components\/bitrix\/system.pagenavigation\/simple-scroll\/style.css","\/local\/templates\/.default\/components\/bitrix\/news.list\/blog_list_tile\/style.css","\/local\/js\/fancybox\/jquery.fancybox.min.css","\/local\/js\/swiper\/swiper-bundle.min.css","\/local\/templates\/ih_blog\/main.css","\/local\/templates\/ih_blog\/css\/font-icomoon.css","\/local\/templates\/ih_blog\/css\/font-icomoon-blog.css","\/local\/templates\/ih_blog\/css\/font-awesome.min.css","\/local\/templates\/.default\/components\/bitrix\/advertising.banner\/banner-top\/style.css","\/local\/components\/ih\/search.title\/templates\/blog-search-form\/style.css","\/local\/components\/ih\/check.user_fields\/templates\/no-email-popup\/style.css"]);</script>
+<script  src="/bitrix/cache/js/s1/ih_blog/template_dcdeab10915fd50a57c532f676023e5b/template_dcdeab10915fd50a57c532f676023e5b_v1.js?1780484536235571"></script>
+<script  src="/bitrix/cache/js/s1/ih_blog/page_1673aed520753dc31313fbfb6c6363b2/page_1673aed520753dc31313fbfb6c6363b2_v1.js?178048453629464"></script>
+<script>var _ba = _ba || []; _ba.push(["aid", "b1e2130e337b50b816dfc4cb59bc3a53"]); _ba.push(["host", "info-hit.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+<script type="text/javascript">
+    var loginPopupOptions = {
+        focus: false,
+        touch: false,
+        closeClickOutside: true,
+    };
+
+    var openLoginPopup = function () {
+        if ($.fn.fancybox) {
+            $.fancybox.open($.extend({
+                src: '#loginWindow',
+                type: 'inline',
+            }, loginPopupOptions));
+        }
+    };
+
+    var loadLoginPopup = function (params, popupName) {
+        var popup = $('.ihit-' + popupName + '-popup');
+
+        if (!popup.length) {
+            return;
+        }
+
+        $('.ihit-reg-popup-container', popup).html('<div class="window-loader"><i class="fa fa-spinner fa-spin"></i></div>');
+
+        $.get(popup.data('href'), params, function(data) {
+            $('.ihit-reg-popup-container', popup).html(data);
+        }, 'html');
+    };
+
+    var userLogin = function login () {
+        var popupName = $(this).data('popup');
+        var params = {
+            is_ajax: 'Y',
+                        step: $(this).data('step'),
+                        title: $(this).data('title'),
+            description: $(this).data('description'),
+            button: $(this).data('button'),
+            partners: $(this).data('partners'),
+            authorreg: $(this).data('authorreg'),
+            progress_element: $(this).data('progress-element'),
+            progress_action: $(this).data('progress-action')
+        };
+        params.params = {
+            author: $(this).data('author'),
+            author_id: $(this).data('author-id'),
+            code: $(this).data('code'),
+            group: $(this).data('group'),
+            url: $(this).data('url'),
+        };
+
+        loadLoginPopup(params, popupName);
+    };
+
+    $(function() {
+        $('.ihit-popup-show').on('click', userLogin);
+
+        // Initialize fancybox on elements present at page load
+        // and mark them as initialized
+        $('.js-login-button').each(function() {
+            $(this).data('fancybox-initialized', true);
+        }).fancybox(loginPopupOptions);
+
+        // Event delegation for dynamically added elements (e.g., from Bitrix Composite Cache frames)
+        // This ensures login buttons work even if they're added to the DOM after page load
+        $(document).on('click', '.js-login-button', function(e) {
+            var $this = $(this);
+            
+            // If element was initialized with fancybox at page load, let fancybox handle it
+            // Elements added dynamically after page load won't have this flag
+            if ($this.data('fancybox-initialized')) {
+                return; // Let the fancybox handler work
+            }
+            
+            // If fancybox is already open, don't interfere
+            if ($.fancybox.getInstance()) {
+                return;
+            }
+
+            // This is a dynamically added element - handle it manually
+            e.preventDefault();
+            e.stopPropagation();
+
+            // Load content into the popup
+            userLogin.call(this);
+
+            // Open fancybox manually
+            if ($.fn.fancybox) {
+                $.fancybox.open({
+                    src: '#loginWindow',
+                    type: 'inline',
+                    touch: false,
+                    focus: false,
+                    closeClickOutside: true
+                });
+            }
+
+            return false;
+        });
+
+            });
+
+
+</script>
+
+<script>
+	BX.ready(function(){
+		new JCTitleSearch({
+			'AJAX_PAGE' : '/blog/gormonalnyy-balans-chto-est-chtoby-snizit-pms-i-oblegchit-menopauzu-4470f74a/?ELEMENT_CODE=gormonalnyy-balans-chto-est-chtoby-snizit-pms-i-oblegchit-menopauzu-4470f74a&amp;urlTypeId=24',
+			'CONTAINER_ID': 'blog-title-search',
+			'INPUT_ID': 'blog-search',
+			'MIN_QUERY_LEN': 2
+		});
+	});
+</script>
+
+<script data-dynamic-store>window['__phpStore']['4beb7deac351698b433dbbe542410b83'] = { currentUser: {"id":0,"isAuth":false,"favoritesCount":0,"favoriteList":[],"compareList":[],"basketList":[],"firstName":"","lastName":"","fullName":"","personalPhoto":null,"avatar":null,"email":null,"phone":null,"userType":null} };</script><script>if (window.updateBxVueComponent) {window.updateBxVueComponent();}</script><script type="text/javascript">
+    window.onload = function() {
+      window.yaParams = {
+        'isCorpotareBlogEntry': true,
+      };
+      if (typeof window.ym !== 'undefined') {
+        ym(17951839, 'params', window.yaParams || {});
+      }
+    };
+  </script><script>if (window.updateBxVueComponent) {window.updateBxVueComponent();}</script><script type="text/javascript">
+        (function(m, e, t, r, i, loadDelayMs, interactionDelayMs) {
+        if (!m[i]) {
+            m[i] = function() {
+                (m[i].a = m[i].a || []).push(arguments);
+            };
+            m[i].l = 1 * new Date();
+        }
+
+        if (m[i].load) {
+            return;
+        }
+
+        var loaded = false;
+        var loadTimer = null;
+        var interactionTimer = null;
+        var fallbackUrl = "https://mc.yandex.ru/metrika/tag.js";
+        var interactionEvents = ['pointerdown', 'touchstart', 'keydown', 'scroll'];
+        var interactionOptions = {once: true, passive: true, capture: true};
+        var insertScript = function(src, retryOnError) {
+            var k = e.createElement(t);
+            var a = e.getElementsByTagName(t)[0];
+            k.async = true;
+            k.src = src;
+            if (retryOnError) {
+                var retried = false;
+                k.onerror = function() {
+                    if (retried) {
+                        return;
+                    }
+                    retried = true;
+                    k.onerror = null;
+                    insertScript(fallbackUrl, false);
+                };
+            }
+            a.parentNode.insertBefore(k, a);
+        };
+        var removeInteractionListeners = function() {
+            for (var eventIndex = 0; eventIndex < interactionEvents.length; eventIndex++) {
+                m.removeEventListener(interactionEvents[eventIndex], scheduleInteractionLoad, interactionOptions);
+            }
+        };
+
+        var load = function() {
+            if (loaded) {
+                return;
+            }
+            loaded = true;
+
+            if (loadTimer !== null) {
+                m.clearTimeout(loadTimer);
+            }
+            if (interactionTimer !== null) {
+                m.clearTimeout(interactionTimer);
+            }
+            removeInteractionListeners();
+
+            insertScript(r, r !== fallbackUrl);
+        };
+        var scheduleInteractionLoad = function() {
+            if (loaded || interactionTimer !== null) {
+                return;
+            }
+
+            interactionTimer = m.setTimeout(load, Math.max(0, interactionDelayMs));
+        };
+
+        var scheduleLoad = function() {
+            loadTimer = m.setTimeout(load, Math.max(0, loadDelayMs));
+        };
+
+        m[i].load = load;
+
+        if (e.readyState === 'complete') {
+            scheduleLoad();
+        } else {
+            m.addEventListener('load', scheduleLoad, {once: true});
+        }
+
+        for (var eventIndex = 0; eventIndex < interactionEvents.length; eventIndex++) {
+            m.addEventListener(interactionEvents[eventIndex], scheduleInteractionLoad, interactionOptions);
+        }
+    })(
+        window,
+        document,
+        "script",
+        "/include/js/yandex-metrika/tag.js?v=1782910511",
+        "ym",
+        2500,
+        0    );
+    
+    var ihYandexMetrikaServerPageview = (function(m, e, config) {
+        var fallbackHitQueued = false;
+        var cookieMatch = e.cookie.match(new RegExp('(?:^|; )_ym_uid=([0-9]{1,32})(?:;|$)'));
+        var hasClientId = !!cookieMatch;
+        var hasFetch = typeof m.fetch === 'function';
+        var isPathAllowed = function() {
+            if (!config.enabled || !hasClientId || !hasFetch) {
+                return false;
+            }
+            if (!config.paths || config.paths.length === 0) {
+                return true;
+            }
+            for (var pathIndex = 0; pathIndex < config.paths.length; pathIndex++) {
+                if (m.location.pathname === config.paths[pathIndex]) {
+                    return true;
+                }
+            }
+
+            return false;
+        };
+        var shouldUseServerPageview = isPathAllowed();
+        var queueFallbackHit = function() {
+            if (!shouldUseServerPageview || fallbackHitQueued) {
+                return;
+            }
+
+            fallbackHitQueued = true;
+            m.ym(17951839, 'hit', m.location.href, {
+                referer: e.referrer,
+                title: e.title
+            });
+        };
+        var send = function() {
+            if (!shouldUseServerPageview) {
+                return;
+            }
+
+            m.fetch(config.endpoint, {
+                method: 'POST',
+                credentials: 'same-origin',
+                keepalive: true,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    dl: m.location.href,
+                    dr: e.referrer,
+                    dt: e.title
+                })
+            }).then(function(response) {
+                if (!response.ok) {
+                    queueFallbackHit();
+                    return;
+                }
+
+                response.json().then(function(data) {
+                    if (!data || data.sent !== true) {
+                        queueFallbackHit();
+                    }
+                }, queueFallbackHit);
+            }, queueFallbackHit);
+        };
+
+        return {
+            shouldUseServerPageview: shouldUseServerPageview,
+            send: send
+        };
+    })(window, document, {"enabled":false,"endpoint":"/api/metrika/pageview/","paths":[]});
+
+    var yandexMetrikaInitOptions = {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true    };
+    if (ihYandexMetrikaServerPageview.shouldUseServerPageview) {
+        yandexMetrikaInitOptions.defer = true;
+    }
+
+    ym(17951839, "init", yandexMetrikaInitOptions);
+    ihYandexMetrikaServerPageview.send();
+    </script>
+<script data-last-view-id>
+        if (typeof window.lastViewId === 'undefined') {
+            window.lastViewId = 35774018;
+        }
+        </script></body>
+</html><script type='module' crossorigin src='/dist/client/assets/awayLink-kNBKu7H3.js' data-vite data-vite-script data-entry='pages/away-link/index.ts' data-params=''></script><link rel='modulepreload' href='/dist/client/assets/index-C2D1iEj_.js' data-vite data-vite-link><link rel='modulepreload' href='/dist/client/assets/index-CdLxH8Ht.js' data-vite data-vite-link><!--b5925e278390cb6082b660d830d22ce5-->
