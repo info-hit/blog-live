@@ -1,0 +1,20 @@
+{
+  "name": "blog-live",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Standalone live preview sandbox for InfoHit blog article HTML.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5177",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4177",
+    "article:new": "node scripts/new-article.mjs",
+    "snapshot:pull": "node scripts/pull-snapshot.mjs",
+    "sync:site-css": "node scripts/sync-site-css.mjs"
+  },
+  "devDependencies": {
+    "sass": "^1.75.0",
+    "typescript": "^5.9.3",
+    "vite": "^6.3.5"
+  }
+}
