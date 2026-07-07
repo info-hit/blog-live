@@ -1,87 +1,195 @@
-# Blog Live
+# Blog Live — live preview статей блога InfoHit
 
-Standalone Vite-песочница для live preview HTML-верстки статей блога InfoHit.
+Это отдельная песочница для верстки HTML-статей блога.
 
-Цель: верстальщик редактирует HTML-файл в `articles/`, браузер сразу показывает результат внутри полного HTML snapshot production-страницы блога.
+Что она делает:
 
-Без Dify, без Bitrix API, без записи в базу. HTML страницы, header/footer и CSS/картинки берутся из production snapshot.
+- показывает статью почти как на настоящем сайте InfoHit;
+- автоматически обновляет страницу после сохранения файла;
+- не подключается к админке, базе данных и Bitrix;
+- не публикует статью на сайт — это только удобный предпросмотр.
 
-## Быстрый старт
+Главное: вы редактируете обычный HTML-файл в папке `articles/`, сохраняете его, браузер сам обновляет preview.
+
+---
+
+## 1. Что нужно установить один раз
+
+### Вариант проще: GitHub Desktop + VS Code
+
+Если вы не работаете с командной строкой каждый день, этот вариант проще.
+
+1. Установите **GitHub Desktop**:  
+   https://desktop.github.com/
+2. Установите **Visual Studio Code**:  
+   https://code.visualstudio.com/
+3. Установите **Node.js LTS**:  
+   https://nodejs.org/
+
+После установки Node.js откройте терминал и выполните:
+
+```bash
+npm install -g pnpm
+```
+
+Проверка:
+
+```bash
+node -v
+pnpm -v
+```
+
+Если обе команды показывают версии — всё готово.
+
+---
+
+## 2. Как скачать проект
+
+### Через GitHub Desktop
+
+1. Откройте репозиторий на GitHub:  
+   https://github.com/info-hit/blog-live
+2. Нажмите **Code → Open with GitHub Desktop**.
+3. Выберите папку, куда сохранить проект.
+4. Нажмите **Clone**.
+5. В GitHub Desktop нажмите **Repository → Open in Visual Studio Code**.
+
+### Через терминал
+
+```bash
+git clone git@github.com:info-hit/blog-live.git
+cd blog-live
+```
+
+Если SSH-доступ не настроен, можно использовать HTTPS:
+
+```bash
+git clone https://github.com/info-hit/blog-live.git
+cd blog-live
+```
+
+---
+
+## 3. Первый запуск проекта
+
+Откройте терминал в папке проекта и выполните:
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-Открыть:
+После запуска в терминале будет ссылка примерно такого вида:
 
 ```text
 http://localhost:5177/
 ```
 
-В рабочем окружении InfoHit удобнее открыть:
+Откройте её в браузере.
 
-```text
-http://sm.info-hit.ru:5177/
-```
+Важно: терминал с `pnpm dev` должен оставаться открытым. Пока он работает — работает live preview.
 
-## Статьи
+---
 
-Все статьи лежат в `articles/`:
+## 4. Как создать новую статью
 
-```text
-articles/main-example.html
-articles/my-new-article.html
-articles/drafts/longread.html
-```
-
-Создать новую статью:
+В терминале, в папке проекта:
 
 ```bash
 pnpm article:new my-new-article
-pnpm article:new drafts/longread
 ```
 
-После создания/сохранения файла Vite обновит preview.
-
-## Как пользоваться
-
-1. Запустить `pnpm dev`.
-2. Открыть preview страницу.
-3. На начальной странице выбрать статью.
-4. Откроется preview на всю ширину экрана с верхней панелью навигации.
-5. Редактировать соответствующий файл в `articles/`.
-6. Сохранять файл и смотреть live reload.
-
-## Production snapshot
-
-Preview строится из файла:
+Будет создан файл:
 
 ```text
-src/snapshot/blog-page.html
+articles/my-new-article.html
 ```
 
-Это скачанный HTML реальной страницы блога с production. В preview он открывается внутри `iframe srcdoc`.
-
-В dev-режиме ресурсы страницы (`/bitrix`, `/local`, `/upload`, `/include`) проксируются Vite-сервером на:
-
-```text
-https://info-hit.ru/
-```
-
-Так шрифты, CSS, картинки и SVG остаются теми же, но для браузера грузятся с текущего dev-origin. Это важно для webfont: при прямой загрузке font-файлов с `https://info-hit.ru` внутри `srcdoc` браузер может заблокировать их по CORS и показать системный шрифт.
-
-Обновить snapshot с любой статьи блога:
+Можно создавать статьи в подпапках:
 
 ```bash
-pnpm snapshot:pull https://info-hit.ru/blog/some-article-code/
+pnpm article:new drafts/my-draft
 ```
 
-Для безопасности runtime `<script>`/`<noscript>` из snapshot удаляются в браузере: нам нужны HTML/CSS/assets, но не production-аналитика и не пользовательские скрипты в dev-preview.
+Будет создан файл:
 
-## Серверные маркеры
+```text
+articles/drafts/my-draft.html
+```
 
-Маркеры вроде:
+Имя лучше писать латиницей, маленькими буквами, через дефис:
+
+```text
+good-name.html
+```
+
+Не надо так:
+
+```text
+Моя новая статья!!!.html
+```
+
+---
+
+## 5. Как редактировать статью
+
+1. Откройте папку `articles/`.
+2. Откройте нужный `.html` файл.
+3. Редактируйте HTML.
+4. Сохраните файл.
+5. Браузер обновится сам.
+
+Пример простого фрагмента:
+
+```html
+<h2>Заголовок раздела</h2>
+
+<p>
+  Текст абзаца. Можно использовать <strong>жирный текст</strong>,
+  <em>курсив</em> и обычные ссылки.
+</p>
+
+<ul>
+  <li>Первый пункт</li>
+  <li>Второй пункт</li>
+</ul>
+```
+
+---
+
+## 6. Что можно использовать в HTML
+
+Обычно нужны такие теги:
+
+```html
+<h2>Заголовок</h2>
+<h3>Подзаголовок</h3>
+<p>Абзац текста</p>
+<strong>Жирный текст</strong>
+<em>Курсив</em>
+<a href="https://example.com/">Ссылка</a>
+<ul>
+  <li>Пункт списка</li>
+</ul>
+<ol>
+  <li>Первый пункт</li>
+</ol>
+<blockquote>Цитата</blockquote>
+```
+
+Картинки можно вставлять обычным HTML:
+
+```html
+<img src="https://info-hit.ru/upload/some-image.jpg" alt="Описание картинки">
+```
+
+Если картинка пока только на компьютере, сначала загрузите её туда, где она будет доступна по ссылке, или передайте файл разработчику/контент-менеджеру для загрузки на сайт.
+
+---
+
+## 7. Серверные маркеры сайта
+
+В настоящем блоге могут встречаться специальные маркеры:
 
 ```text
 #IMG1#
@@ -90,33 +198,117 @@ pnpm snapshot:pull https://info-hit.ru/blog/some-article-code/
 #GALLERY#
 ```
 
-не рендерятся настоящими Bitrix-блоками. Песочница только подсвечивает их как заглушки.
+В этой песочнице они не превращаются в настоящие блоки сайта. Песочница только показывает их как заглушки.
 
-Финальную проверку статьи с настоящими курсами, картинками, галереями и `result_modifier.php` нужно делать в реальном Bitrix preview/draft.
+Финальную проверку таких блоков нужно делать уже в настоящем preview/draft сайта.
 
-## Стили сайта
+---
 
-`src/styles/page-blog-new.snapshot.css` — snapshot текущего compiled CSS блога из монорепозитория:
+## 8. Как сохранить работу в GitHub
+
+Если вы работаете через GitHub Desktop:
+
+1. Слева появятся изменённые файлы.
+2. В поле **Summary** напишите коротко, что изменено, например:
+
+   ```text
+   Add draft article about online learning
+   ```
+
+3. Нажмите **Commit to main**.
+4. Нажмите **Push origin**.
+
+Если вы работаете через терминал:
+
+```bash
+git status
+git add articles/my-new-article.html
+git commit -m "Add blog article draft"
+git push
+```
+
+---
+
+## 9. Как открыть проект на следующий день
+
+1. Откройте папку проекта в VS Code.
+2. Откройте терминал.
+3. Обновите проект:
+
+   ```bash
+   git pull
+   ```
+
+4. Запустите preview:
+
+   ```bash
+   pnpm dev
+   ```
+
+5. Откройте в браузере:
+
+   ```text
+   http://localhost:5177/
+   ```
+
+---
+
+## 10. Частые проблемы
+
+### `pnpm: command not found`
+
+Установите pnpm:
+
+```bash
+npm install -g pnpm
+```
+
+Потом снова:
+
+```bash
+pnpm install
+pnpm dev
+```
+
+### `localhost:5177` не открывается
+
+Проверьте:
+
+1. Выполнена ли команда `pnpm dev`.
+2. Не закрыт ли терминал.
+3. Нет ли ошибки в терминале.
+4. Открываете ли именно:
+
+   ```text
+   http://localhost:5177/
+   ```
+
+### После сохранения ничего не меняется
+
+Проверьте:
+
+1. Сохранён ли файл (`Ctrl+S` / `Cmd+S`).
+2. Редактируете ли файл внутри папки `articles/`.
+3. Выбрана ли в браузере именно эта статья.
+
+### В терминале ошибка HTML или TypeScript
+
+Скопируйте текст ошибки и отправьте разработчику.
+
+---
+
+## 11. Что отправлять разработчику для публикации
+
+Для публикации обычно нужен только файл статьи из `articles/`, например:
 
 ```text
-local/templates/info_hit_amp/css/page-blog-new.css
+articles/my-new-article.html
 ```
 
-В монорепозитории InfoHit обновить snapshot можно так:
+Если использовались картинки, также отправьте:
 
-```bash
-pnpm sync:site-css
-```
+- список картинок;
+- где они должны стоять в статье;
+- alt-тексты, если они важны для SEO.
 
-Если пакет вынести в отдельный GitHub-репозиторий, snapshot CSS уже лежит внутри пакета и продолжит работать.
-
-## Скрипты
-
-```bash
-pnpm dev          # Vite dev server, port 5177
-pnpm build        # typecheck + production build
-pnpm preview      # preview build, port 4177
-pnpm article:new  # создать articles/<name>.html
-pnpm snapshot:pull # скачать production HTML snapshot
-pnpm sync:site-css
-```
+Эта песочница не публикует статью автоматически. Она только помогает удобно сверстать и проверить HTML до передачи на сайт.
